@@ -17,6 +17,19 @@
     <!-- NAVBAR -->
     <?php include(TEMPLATE_FRONT . DS . "navbar.php"); ?>
 
+    <!-- HEADER -->
+    <div>
+        <div class="row">
+            <div class="col-lg-6">
+                <p>Insegnate di</p>
+                <h1>Voceterapia</h1>
+            </div>
+            <div class="col-lg-6">
+                <img src="images/grigio-ginocchio.jpg" alt="foto elisa fortunati">
+            </div>
+        </div>
+    </div>
+
     <!-- UP BUTTON -->
     <button type="button" class="btn rounded-circle shadow btn-lg" id="upBtn" onclick="backToTop()"><i class="fas fa-chevron-up"></i></button>
 
