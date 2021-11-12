@@ -18,7 +18,7 @@
     <?php include(TEMPLATE_FRONT . DS . "navbar.php"); ?>
 
     <!-- HEADER -->
-    <div>
+    <div id="Header">
         <div class="row">
             <div class="col-lg-6">
                 <p>Insegnate di</p>

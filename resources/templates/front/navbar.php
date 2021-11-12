@@ -1,7 +1,7 @@
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <div class="container-fluid">
         <a class="navbar-brand" href="index.php">Elisa Fortunati</a>
-        <a class="visually-hidden-focusable" href="#">Vai al contenuto principale</a>
+        <a class="visually-hidden-focusable" href="#Header">Vai al contenuto principale</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarLinks" aria-controls="navbarLinks" aria-expanded="false" aria-label="Riduci navigazione">
             <span class="navbar-toggler-icon"></span>
         </button>
