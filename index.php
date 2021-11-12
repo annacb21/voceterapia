@@ -15,7 +15,7 @@
 <body>
     
     <!-- NAVBAR -->
-    
+    <?php include(TEMPLATE_FRONT . DS . "navbar.php"); ?>
 
     <!-- UP BUTTON -->
 
