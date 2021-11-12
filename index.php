@@ -20,11 +20,11 @@
     <!-- HEADER -->
     <div id="Header">
         <div class="row">
-            <div class="col-lg-6">
+            <div class="col-lg-8">
                 <p>Insegnate di</p>
                 <h1>Voceterapia</h1>
             </div>
-            <div class="col-lg-6">
+            <div class="col-lg-4">
                 <img src="images/grigio-ginocchio.jpg" alt="foto elisa fortunati">
             </div>
         </div>
@@ -40,7 +40,7 @@
         Il corpo, attraverso la voce, parla la lingua delle emozioni.
         Il mio ruolo è aiutarti a capire meglio come farla tua.
         </p>
-        <button type="button" class="btn btn-primary">Approfondisci <span><i class="fas fa-arrow-right"></i></span></button>
+        <a href="voceterapia.php" role="button" class="btn btn-primary" aria-label="Approfondisci">Approfondisci <span><i class="fas fa-arrow-right"></i></span></a>
         <figure>
             <blockquote class="blockquote">
                 <p>“Se canti solo con la voce, prima o poi dovrai tacere. Canta con il cuore, affinché tu non debba mai tacere.”</p>
@@ -49,6 +49,31 @@
                 <cite title="Source Title">Augusto Daolio</cite>
             </figcaption>
         </figure>
+    </div>
+
+    <!-- FORMAZIONE -->
+    <div>
+        <h2>Formazione</h2>
+        <div class="row">
+            <div class="col-lg-4">
+                <img src="images/pripia7.jpg" alt="foto elisa fortunati">
+            </div>
+            <div class="col-lg-8">
+                <div class="row">
+                    <div>
+                        <p>Dopo il conseguimento del Diploma di Canto con 10 e lode, ho conseguito la laurea in Filosofia con 110 e lode.
+                        Ho pubblicato un articolo relativo alla tesi di laurea “Sul Compendium musicae” di Cartesio nella Rivista Musicologica “Quaderni di musicologia” ed ho vinto il concorso come Coordinatore dei Servizi Musicali della Fondazione Arena.
+                        Ho Iniziato la carriera della solista 20 anni fa affiancando l’attività artistica a quella didattica.
+                        Appassionata da sempre di canto e voce, ho seguito corsi con i migliori maestri ed esperti della tecnica vocale, con particolare attenzione alle seguenti problematiche: respirazione, postura, collegamento del fiato col suono, ginnastica facciale, ortoepia, articolazione sillabica, ginnastica facciale e dizione.
+                        Ho tenuto quindi corsi di canto, respirazione e percezione corporea ed, in stretta collaborazione con psicologi e specialisti di disturbi infantili e adolescenziali, ho effettuato con successo attività di supporto a problemi di balbuzie e/o difficoltà emotiva, utilizzando la musica, tecniche di respirazione e vocali.
+                        Mi sono anche dedicata all’impostazione, rieducazione vocale e respiratoria, di adulti ed adolescenti con problematiche nel meccanismo pneumofonico e conseguenti difficoltà di comunicazione.
+                        Ho tenuto corsi di impostazione vocale e canto (lirico e leggero) in scuole private, per studenti del Conservatorio e corsi di musica nella scuola pubblica sia come esperta esterna che come docente interna. 
+                        </p>
+                        <a href="formazione.php" role="button" class="btn btn-primary" aria-label="Approfondisci">Approfondisci <span><i class="fas fa-arrow-right"></i></span></a>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 
     <!-- UP BUTTON -->
