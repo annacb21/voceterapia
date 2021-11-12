@@ -28,9 +28,9 @@
         </div>
         <div class="col-lg-4">
             <h4>Contatti</h4>
-            <p><i class="fas fa-at"></i>elisa.fortunati@virgilio.it</p>
-            <a href="#"><span><i class="fab fa-facebook"></i>Elisa Fortunati</span></a>
-            <a href="#"><span><i class="fab fa-instagram"></i>@elisafortunati</span></a>
+            <p><i class="fas fa-at"></i> <span>elisa.fortunati@virgilio.it</span></p>
+            <a href="#"><i class="fab fa-facebook"></i> <span>Elisa Fortunati</span></a>
+            <a href="#"><i class="fab fa-instagram"></i> <span>@elisafortunati</span></a>
         </div>
         <div class="col-lg-4">
             <div class="row">
