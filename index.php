@@ -18,6 +18,7 @@
     <?php include(TEMPLATE_FRONT . DS . "navbar.php"); ?>
 
     <!-- UP BUTTON -->
+    <button type="button" class="btn rounded-circle shadow btn-lg" id="upBtn" onclick="backToTop()"><i class="fas fa-chevron-up"></i></button>
 
     <!-- FOOTER -->
     <?php include(TEMPLATE_FRONT . DS . "footer.php"); ?>
