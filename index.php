@@ -30,6 +30,27 @@
         </div>
     </div>
 
+    <!-- VOCETERAPIA -->
+    <div>
+        <h2>Cos'è la voceterapia?</h2>
+        <p>La voce è lo strumento più naturale che esista.
+        Ciascuno di noi nasce con questa “dotazione”, personalissima ed unica, che lo rende per questo speciale e irripetibile.
+        Ciascuna voce è, però, non solo legata alle nostre caratteristiche fisiche e morfologiche  ma anche alla storia soggettiva, ai vissuti, che fanno parte di noi e che, in qualche modo,  anche il nostro strumento vocale racconta.
+        Lavorando quindi sul nostro principale e immediato mezzo di comunicazione, si entra in un campo di analisi che è anche “altro” rispetto a quello semplicemente canoro o verbale, in virtù di questa connessione inedita tra voce e anima, tra parola e inconscio.
+        Il corpo, attraverso la voce, parla la lingua delle emozioni.
+        Il mio ruolo è aiutarti a capire meglio come farla tua.
+        </p>
+        <button type="button" class="btn btn-primary">Approfondisci <span><i class="fas fa-arrow-right"></i></span></button>
+        <figure>
+            <blockquote class="blockquote">
+                <p>“Se canti solo con la voce, prima o poi dovrai tacere. Canta con il cuore, affinché tu non debba mai tacere.”</p>
+            </blockquote>
+            <figcaption class="blockquote-footer">
+                <cite title="Source Title">Augusto Daolio</cite>
+            </figcaption>
+        </figure>
+    </div>
+
     <!-- UP BUTTON -->
     <button type="button" class="btn rounded-circle shadow btn-lg" id="upBtn" onclick="backToTop()"><i class="fas fa-chevron-up"></i></button>
 
