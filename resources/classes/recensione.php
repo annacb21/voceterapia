@@ -29,7 +29,7 @@ class Recensione {
     }
 
     public function get_foto_autore() {
-        return $this->foto_autore != null ? $this->foto_autore : "nullprofile.jpg";
+        return $this->foto_autore != null ? $this->foto_autore : "nullprofile.png";
     }
 
     public function get_titolo() {
