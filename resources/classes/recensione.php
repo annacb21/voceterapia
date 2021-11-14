@@ -32,7 +32,7 @@ class Recensione {
         return $this->foto_autore != null ? $this->foto_autore : "nullprofile.jpg";
     }
 
-    public function get_title() {
+    public function get_titolo() {
         return $this->titolo;
     }
 
