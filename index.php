@@ -1,4 +1,17 @@
-<?php require_once("resources/config.php"); ?>
+<?php 
+require_once("resources/config.php"); 
+$query = query("SELECT * FROM recensioni ORDER BY data LIMIT 4");
+confirm($query);
+$recensioni = array();
+$i = 0;
+while($row = fetch_array($query)) {
+    $d = $row['data'];
+    setlocale(LC_TIME, 'it_IT');
+    $pdate = strftime("%d %B %Y", strtotime($d));
+    $recensioni[$i] = new Recensione($row['id'], $row['autore'], $row['foto_autore'], $row['titolo'], $row['testo'], $row['punteggio'], $d);
+    $i++;
+}
+?>
 
 <!DOCTYPE html>
 <html lang="it">
@@ -74,6 +87,52 @@
                 </div>
             </div>
         </div>
+    </div>
+
+    <!-- RECENSIONI -->
+    <div>
+        <h2>Ultime recensioni</h2>
+        <div class="row">
+<?php
+foreach($recensioni as $r) {
+$stars = "<div class='row'>";
+for($i=0; $i<$r->get_punteggio(); $i++) {
+$stars .= <<<DELIMETER
+<div class="col-lg-1">
+    <i class="fas fa-star"></i>
+</div>
+DELIMETER;
+}
+for($i=0; $i<5-($r->get_punteggio()); $i++) {
+$stars .= <<<DELIMETER
+<div class="col-lg-1">
+    <i class="far fa-star"></i>
+</div>
+DELIMETER;
+}
+$stars .= "</div>";
+$review = <<<DELIMETER
+<div class="col-lg-4">
+    <div class="card">
+        <div class="card-body">
+            <div class="row">
+                <div class="col-lg-1">
+                    <img src="images/{$r->get_foto_autore()}" style="width: 2em;" alt="foto autore recensione">
+                </div>
+                <div class="col-lg-4">
+                    <p class="card-subtitle text-muted">{$r->get_autore()}</p>
+                </div>
+            </div>
+            <p class="card-title">{$r->get_titolo()}</p>
+            <p class="card-text">{$r->get_testo()}</p>
+DELIMETER;
+$review .= $stars;
+$review .= "<p class='text-muted'>{$r->get_data()}</p></div></div></div>";
+echo $review;
+}
+?>
+        </div>
+        <a href="recensioni.php" role="button" class="btn btn-primary" aria-label="Tutte le recensioni">Tutte le recensioni <span><i class="fas fa-arrow-right"></i></span></a>
     </div>
 
     <!-- UP BUTTON -->
