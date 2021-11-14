@@ -40,7 +40,7 @@
                 </div>
                 <div>
                     <h4>Sito personale</h4>
-                    <p>www.elisafortunati.it</p>
+                    <a href="http://www.elisafortunati.it/home.html">www.elisafortunati.it</a>
                 </div>
             </div>
         </div>
