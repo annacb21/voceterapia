@@ -66,6 +66,10 @@
             </div>
         </form>
     </div>
+
+    <div>
+        <h1>Tutte le recensioni</h1>
+    </div>
     
     <!-- UP BUTTON -->
     <button type="button" class="btn rounded-circle shadow btn-lg" id="upBtn" onclick="backToTop()"><i class="fas fa-chevron-up"></i></button>
