@@ -1,6 +1,6 @@
 <?php 
 require_once("resources/config.php"); 
-$query = query("SELECT * FROM recensioni ORDER BY data LIMIT 4");
+$query = query("SELECT * FROM recensioni ORDER BY data DESC LIMIT 4");
 confirm($query);
 $recensioni = array();
 $i = 0;
