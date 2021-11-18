@@ -1,0 +1,19 @@
+.glide__bullets {
+    bottom: 0 !important;
+}
+
+.glide__bullet {
+    background-color: azure !important;
+}
+
+.glide__bullet--active {
+    background-color: aqua !important;
+}
+
+.glide__bullet:hover, .glide__bullet:focus {
+    border: 2px solid aqua !important;
+}
+
+.glide__slides {
+    white-space: normal !important;
+}
