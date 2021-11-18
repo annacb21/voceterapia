@@ -1,4 +1,17 @@
-<?php require_once("resources/config.php"); ?>
+<?php 
+require_once("resources/config.php"); 
+$query = query("SELECT * FROM recensioni ORDER BY data DESC");
+confirm($query);
+$recensioni = array();
+$i = 0;
+while($row = fetch_array($query)) {
+    $d = $row['data'];
+    setlocale(LC_TIME, 'it_IT');
+    $pdate = strftime("%d %B %Y", strtotime($d));
+    $recensioni[$i] = new Recensione($row['id'], $row['autore'], $row['foto_autore'], $row['titolo'], $row['testo'], $row['punteggio'], $d);
+    $i++;
+}
+?>
 
 <!DOCTYPE html>
 <html lang="it">
@@ -11,6 +24,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="styles.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="node_modules/@glidejs/glide/dist/css/glide.core.min.css">
+    <link rel="stylesheet" href="node_modules/@glidejs/glide/dist/css/glide.theme.min.css">
 </head>
 <body>
     
@@ -69,6 +84,62 @@
 
     <div>
         <h1>Tutte le recensioni</h1>
+        <div>
+            <h2>Dal sito</h2>
+            <div class="glide">
+                <div class="glide__track" data-glide-el="track">
+                    <ul class="glide__slides align-items-center">
+<?php 
+foreach($recensioni as $r) {
+$stars = "<div class='row'>";
+for($i=0; $i<$r->get_punteggio(); $i++) {
+$stars .= <<<DELIMETER
+<div class="col-lg-1">
+    <i class="fas fa-star"></i>
+</div>
+DELIMETER;
+}
+for($i=0; $i<5-($r->get_punteggio()); $i++) {
+$stars .= <<<DELIMETER
+<div class="col-lg-1">
+    <i class="far fa-star"></i>
+</div>
+DELIMETER;
+}
+$stars .= "</div>";
+$review = <<<DELIMETER
+<li>
+    <div class="card">
+        <div class="card-body">
+            <div class="row">
+                <div class="col-lg-1">
+                    <img src="images/{$r->get_foto_autore()}" style="width: 2em;" alt="foto autore recensione">
+                </div>
+                <div class="col-lg-4">
+                    <p class="card-subtitle text-muted">{$r->get_autore()}</p>
+                </div>
+            </div>
+            <p class="card-title">{$r->get_titolo()}</p>
+            <p class="card-text">{$r->get_testo()}</p>
+DELIMETER;
+$review .= $stars;
+$review .= "<p class='text-muted'>{$r->get_data()}</p></div></div></li>";
+echo $review;
+}
+?>
+                    </ul>
+                </div>
+                <div class="glide__bullets" data-glide-el="controls[nav]">
+<?php 
+for($i=0; $i<count($recensioni); $i++) {
+    echo "<button class='glide__bullet' data-glide-dir='={$i}'></button>";
+}
+?>
+                </div>
+            </div>
+
+            <h2>Da Google</h2>
+        </div>
     </div>
     
     <!-- UP BUTTON -->
@@ -82,6 +153,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
     <script src="js/scrollToTop.js"></script>
     <script src="js/validate.js"></script>
+    <script src="node_modules/@glidejs/glide/dist/glide.min.js"></script>
     <script>
         const ratingStars = [...document.getElementsByClassName("rating__star")];
         function executeRating(stars) {
@@ -101,6 +173,24 @@
             });
         }
         executeRating(ratingStars);
+    </script>
+    <script>
+        new Glide('.glide', {
+            type: 'slider',
+            startAt: 0,
+            perView: 3,
+            focusAt: 0,
+            animationDuration: 1000,
+            gap: 10,
+            breakpoints: {
+                992: {
+                perView: 2
+                },
+                500: {
+                perView: 1
+                }
+            }
+        }).mount()
     </script>
 </body>
 </html>
