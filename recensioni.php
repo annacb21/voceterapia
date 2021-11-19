@@ -1,11 +1,11 @@
 <?php 
 require_once("resources/config.php"); 
-$query = query("SELECT * FROM recensioni ORDER BY data DESC");
+$query = query("SELECT * FROM recensioni ORDER BY data_rec DESC");
 confirm($query);
 $recensioni = array();
 $i = 0;
 while($row = fetch_array($query)) {
-    $d = $row['data'];
+    $d = $row['data_rec'];
     setlocale(LC_TIME, 'it_IT');
     $pdate = strftime("%d %B %Y", strtotime($d));
     $recensioni[$i] = new Recensione($row['id'], $row['autore'], $row['foto_autore'], $row['titolo'], $row['testo'], $row['punteggio'], $d);
@@ -38,6 +38,7 @@ while($row = fetch_array($query)) {
         <p>I campi contrassegnati con un * sono obbligatori</p>
         <?php display_message(); ?>
         <form action="" method="POST" class="row g-3 needs-validation" novalidate>
+            <?php addReview(); ?>
             <div class="col-lg-6">
                 <label for="nome" class="form-label">Nome</label>
                 <input type="text" class="form-control" id="nome" name="nome" placeholder="Mario Rossi, Mario ..." aria-describedby="nameHelp">
