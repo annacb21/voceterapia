@@ -1,6 +1,19 @@
 <?php 
 require_once("resources/config.php"); 
-
+$page = get_page();
+$pagination_start = ($page - 1) * 4;
+$page_news = show_news($pagination_start);
+$query = query("SELECT * FROM news ORDER BY data_news DESC LIMIT 4");
+confirm($query);
+$latest_news = array();
+$i = 0;
+while($row = fetch_array($query)) {
+    $d = $row['data_news'];
+    setlocale(LC_TIME, 'it_IT');
+    $pdate = strftime("%d %B %Y", strtotime($d));
+    $latest_news[$i] = new Post($row['id'], $row['titolo'], $row['testo'], $d);
+    $i++;
+}
 ?>
 
 <!DOCTYPE html>
@@ -21,7 +34,53 @@ require_once("resources/config.php");
     <?php include(TEMPLATE_FRONT . DS . "navbar.php"); ?>
 
     <!-- MAIN CONTENT -->
-    
+    <h1>News</h1>
+    <div class="col-lg-7">
+        <ul id="news">
+<?php 
+foreach($page_news as $n) {
+$post = <<<DELIMETER
+<li>
+    <p>{$n->get_titolo()}</p>
+    <p>{$n->get_data()}</p>
+    <p>{$n->get_text_ant()}</p>
+    <a href="newsDetail.php?id={$n->get_id()}">Leggi di più ...</a>
+</li>
+DELIMETER;
+echo $post;
+}
+?>
+        </ul>
+        <!-- pagination -->
+        <?php show_pagination($page); ?>
+    </div>
+
+    <!-- FILTERS -->
+    <div class="col-lg-5">
+        <div>
+            <h2>ULTIME NEWS</h2>
+            <ul>
+<?php 
+foreach($latest_news as $n) {
+$lpost = <<<DELIMETER
+<li>
+    <a href="newsDetail.php?id={$n->get_id()}">{$n->get_titolo()}</a>
+</li>
+DELIMETER;
+echo $lpost;
+}
+?>
+            </ul>
+        </div>
+        <div>
+            <h2>CERCA</h2>
+            <form action="" method="POST" class="needs-validation d-flex" novalidate>
+                <input class="form-control me-2" type="text" placeholder="Cerca..." aria-label="Cerca" name="cerca">
+                <button class="btn btn-outline-primary" type="submit" name="search">Cerca</button>
+            </form>
+        </div> 
+    </div>
+
     
     <!-- UP BUTTON -->
     <button type="button" class="btn rounded-circle shadow btn-lg" id="upBtn" onclick="backToTop()"><i class="fas fa-chevron-up"></i></button>

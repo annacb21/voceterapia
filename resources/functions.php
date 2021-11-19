@@ -1,6 +1,7 @@
 <?php
 
 require_once("classes/recensione.php");
+require_once("classes/post.php");
 require_once("database.php");
 date_default_timezone_set('Etc/UTC');
 
@@ -64,5 +65,123 @@ function addReview() {
     }
 }
 
+// count pages for pagination
+function get_page() {
+    return (isset($_GET['page']) && is_numeric($_GET['page']) ) ? $_GET['page'] : 1;
+}
+
+// shows articles
+function show_news($start) {
+    $news = array();
+    if(isset($_POST['search'])) {
+        $str = escape_string($_POST['cerca']);
+        $q = query("SELECT * FROM news WHERE titolo LIKE '%$str%' ORDER BY data_news DESC LIMIT 0, 4");
+        confirm($q);
+        if($q->num_rows > 0) {
+            $i = 0;
+            while($row = fetch_array($q)) {
+                $d = $row['data_news'];
+                setlocale(LC_TIME, 'it_IT');
+                $date = strftime("%d %B %Y", strtotime($d));
+                $news[$i] = new Post($row['id'], $row['titolo'], $row['testo'], $date);
+                $i++;
+            }
+        }
+    }
+    else {
+        $q = query("SELECT * FROM news ORDER BY data_news DESC LIMIT $start, 4");
+        confirm($q);
+        $i = 0;
+        while($row = fetch_array($q)) {
+            $d = $row['data_news'];
+            setlocale(LC_TIME, 'it_IT');
+            $date = strftime("%d %B %Y", strtotime($d));
+            $news[$i] = new Post($row['id'], $row['titolo'], $row['testo'], $date);
+            $i++;
+        }
+    }
+    return $news;
+}
+
+// show pagination
+function show_pagination($page) {
+
+$tot_news = 0;
+if(isset($_POST['search'])) {
+$str = escape_string($_POST['cerca']);
+$tot_query = query("SELECT COUNT(*) as tot FROM news WHERE titolo LIKE '%$str%'");
+confirm($tot_query);
+$tot_row = fetch_array($tot_query);
+$tot_news = $tot_row['tot'];
+}
+else {
+$tot_query = query("SELECT COUNT(*) as tot FROM news");
+confirm($tot_query);
+$tot_row = fetch_array($tot_query);
+$tot_news = $tot_row['tot'];
+}
+
+if($tot_news > 4) {
+
+$tot_pages = ceil($tot_news / 4);
+//$pagination_start = ($page - 1) * 4;
+$prev = $page - 1;
+$next = $page + 1;
+if($page <= 1) {
+$dis = " disabled";
+$plink = "#";
+}
+else {
+$dis = "";
+$plink = "?page=" . $prev;
+}
+
+$pag = <<<DELIMETER
+<nav aria-label="Navigazione pagine">
+    <ul class="pagination">
+        <li class="page-item{$dis}">
+            <a class="page-link" href="{$plink}" aria-label="Indietro">
+                <span aria-hidden="true">&laquo;</span>
+            </a>
+        </li>
+DELIMETER;
+
+for($i = 1; $i <= $tot_pages; $i++) {
+if($page == $i) {
+$act = " active";
+}
+else {
+$act = "";
+}
+$pag .= <<<DELIMETER
+<li class="page-item{$act}">
+    <a class="page-link" href="news.php?page={$i}">{$i}</a>
+</li>
+DELIMETER;
+}
+
+if($page >= $tot_pages) {
+$d = " disabled";
+$alink = "#";
+}
+else {
+$d = "";
+$alink = "?page=" . $next;
+}
+$pag .= <<<DELIMETER
+        <li class="page-item{$d}">
+            <a class="page-link" href="{$alink}" aria-label="Avanti">
+                <span aria-hidden="true">&raquo;</span>
+            </a>
+        </li>
+    </ul>
+</nav>
+DELIMETER;
+
+echo $pag;
+
+}
+
+}
 
 ?>
