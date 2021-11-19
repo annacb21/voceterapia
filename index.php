@@ -5,7 +5,7 @@ confirm($query);
 $recensioni = array();
 $i = 0;
 while($row = fetch_array($query)) {
-    $d = $row['data'];
+    $d = $row['data_rec'];
     setlocale(LC_TIME, 'it_IT');
     $pdate = strftime("%d %B %Y", strtotime($d));
     $recensioni[$i] = new Recensione($row['id'], $row['autore'], $row['foto_autore'], $row['titolo'], $row['testo'], $row['punteggio'], $d);
