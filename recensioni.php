@@ -41,19 +41,19 @@ while($row = fetch_array($query)) {
             <?php addReview(); ?>
             <div class="col-lg-6">
                 <label for="nome" class="form-label">Nome</label>
-                <input type="text" class="form-control" id="nome" name="nome" placeholder="Mario Rossi, Mario ..." aria-describedby="nameHelp">
+                <input type="text" class="form-control" id="nome" name="nome" placeholder="Mario Rossi, Mario ..." aria-describedby="nameHelp" maxlength="50">
                 <div id="nameHelp" class="form-text">Non inserire nulla se si vuole pubblicare la recensione come utente anonimo</div>
             </div>
             <div class="col-lg-6">
                 <label for="titolo" class="form-label">* Titolo</label>
-                <input type="text" class="form-control" id="titolo" name="titolo" placeholder="Ottima insegnante di canto ..." required>
+                <input type="text" class="form-control" id="titolo" name="titolo" placeholder="Ottima insegnante di canto ..." maxlength="100" required>
                 <div class="invalid-feedback">Inserire un titolo per la recensione</div>
             </div>
             <div class="col-lg-6">
                 <div>
                     <label for="code" class="form-label">* Codice</label>
-                    <input type="text" class="form-control" id="code" name="code" aria-describedby="codeHelp" required>
-                    <div id="codeHelp" class="form-text">Il codice viene rilasciato dall’insegnante per garantire l’autenticità della recensione</div>
+                    <input type="text" class="form-control" id="code" name="code" aria-describedby="codeHelp" maxlength="15" required>
+                    <div id="codeHelp" class="form-text">Il codice di 15 cifre viene rilasciato dall’insegnante per garantire l’autenticità della recensione</div>
                     <div class="invalid-feedback">Inserire il codice ricevuto dall'insegnante</div>
                 </div>
                 <div class="rating my-3">
@@ -75,8 +75,8 @@ while($row = fetch_array($query)) {
             </div>
             <div class="col-lg-6">
                 <label for="recensione" class="form-label">* Recensione</label>
-                <textarea class="form-control" id="recensione" name="recensione" rows="5" placeholder="Scrivi la tua recensione ..." aria-describedby="recHelp" required></textarea>
-                <div id="recHelp" class="form-text">Lunghezza max. di 280 caratteri</div>
+                <textarea class="form-control" id="recensione" name="recensione" rows="5" placeholder="Scrivi la tua recensione ..." aria-describedby="recHelp" maxlength="410" required></textarea>
+                <div id="recHelp" class="form-text">Lunghezza max. di 410 caratteri</div>
                 <div class="invalid-feedback">Inserire una recensione</div>
             </div>
             <div class="col-lg-12 form-check">
