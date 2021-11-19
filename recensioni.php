@@ -36,6 +36,7 @@ while($row = fetch_array($query)) {
     <div>
         <h1>Scrivi una recensione</h1>
         <p>I campi contrassegnati con un * sono obbligatori</p>
+        <?php display_message(); ?>
         <form action="" method="POST" class="row g-3 needs-validation" novalidate>
             <div class="col-lg-6">
                 <label for="nome" class="form-label">Nome</label>
@@ -75,7 +76,7 @@ while($row = fetch_array($query)) {
                 <div class="invalid-feedback">Devi accettare le condizioni di privacy per poter pubblicare la recensione</div>
             </div>
             <div class="col-lg-12">
-                <button type="submit" name="pubReview" class="btn btn-primary">Pubblica</button>
+                <button type="submit" name="addReview" class="btn btn-primary">Pubblica</button>
                 <p class="d-inline mx-5">oppure</p>
                 <a href="https://www.google.com/search?q=voce+terapia+verona&oq=voc&aqs=chrome.0.69i59l2j35i39j69i57j46i433i512l2j69i60l2.726j0j7&sourceid=chrome&ie=UTF-8#lrd=0x477f5fb8b9aa42c9:0x2cedbd42565a40bf,3,,," role="button" class="btn btn-warning d-inline" aria-label="aggiungi recensione con Google">Scrivi una recensione tramite Google</a>
             </div>
