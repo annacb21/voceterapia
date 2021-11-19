@@ -124,7 +124,6 @@ $tot_news = $tot_row['tot'];
 if($tot_news > 4) {
 
 $tot_pages = ceil($tot_news / 4);
-//$pagination_start = ($page - 1) * 4;
 $prev = $page - 1;
 $next = $page + 1;
 if($page <= 1) {
