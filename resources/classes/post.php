@@ -30,6 +30,11 @@ class Post {
         return $this->testo;
     }
 
+    public function get_text_ant() {
+        $t = $this->testo;
+        return (count($words = explode(' ', $t)) > 150) ? implode(' ', array_slice($words, 0, 150)) . "..." : $t;
+    }
+
 }
 
 ?>
