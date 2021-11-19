@@ -70,7 +70,8 @@ while($row = fetch_array($query)) {
                         <input type="radio" name="rate" id="rate-1" value="1" onClick="document.getElementById('score').value = this.value;">
                         <label for="rate-1" class="fas fa-star"></label>
                     </div>
-                    <input type="hidden" name="score" id="score" value="" required>
+                    <input type="text" class="form-control" name="score" id="score" value="" required>
+                    <div class="invalid-feedback">Scegliere un punteggio da 1 a 5 stelle</div>
                 </div>
             </div>
             <div class="col-lg-6">
