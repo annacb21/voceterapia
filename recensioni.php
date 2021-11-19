@@ -57,11 +57,19 @@ while($row = fetch_array($query)) {
                 </div>
                 <div class="rating my-3">
                     <p>Assegna un punteggio da 1 a 5 stelle</p>
-                    <i class="rating__star far fa-star"></i>
-                    <i class="rating__star far fa-star"></i>
-                    <i class="rating__star far fa-star"></i>
-                    <i class="rating__star far fa-star"></i>
-                    <i class="rating__star far fa-star"></i>
+                    <div class="star-rating">
+                        <input type="radio" name="rate" id="rate-5" value="5" onClick="document.getElementById('score').value = this.value;">
+                        <label for="rate-5" class="fas fa-star"></label>
+                        <input type="radio" name="rate" id="rate-4" value="4" onClick="document.getElementById('score').value = this.value;">
+                        <label for="rate-4" class="fas fa-star"></label>
+                        <input type="radio" name="rate" id="rate-3" value="3" onClick="document.getElementById('score').value = this.value;">
+                        <label for="rate-3" class="fas fa-star"></label>
+                        <input type="radio" name="rate" id="rate-2" value="2" onClick="document.getElementById('score').value = this.value;">
+                        <label for="rate-2" class="fas fa-star"></label>
+                        <input type="radio" name="rate" id="rate-1" value="1" onClick="document.getElementById('score').value = this.value;">
+                        <label for="rate-1" class="fas fa-star"></label>
+                    </div>
+                    <input type="hidden" name="score" id="score" value="" required>
                 </div>
             </div>
             <div class="col-lg-6">
@@ -155,26 +163,6 @@ for($i=0; $i<count($recensioni); $i++) {
     <script src="js/scrollToTop.js"></script>
     <script src="js/validate.js"></script>
     <script src="node_modules/@glidejs/glide/dist/glide.min.js"></script>
-    <script>
-        const ratingStars = [...document.getElementsByClassName("rating__star")];
-        function executeRating(stars) {
-            const starClassActive = "rating__star fas fa-star";
-            const starClassInactive = "rating__star far fa-star";
-            const starsLength = stars.length;
-            let i;
-            stars.map((star) => {
-                star.onclick = () => {
-                    i = stars.indexOf(star);
-                    if (star.className===starClassInactive) {
-                        for (i; i >= 0; --i) stars[i].className = starClassActive;
-                    } else {
-                        for (i; i < starsLength; ++i) stars[i].className = starClassInactive;
-                    }
-                };
-            });
-        }
-        executeRating(ratingStars);
-    </script>
     <script>
         new Glide('.glide', {
             type: 'slider',

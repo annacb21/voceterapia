@@ -17,3 +17,26 @@
 .glide__slides {
     white-space: normal !important;
 }
+
+.rating .star-rating input {
+    display: none;
+}
+
+.rating .star-rating label {
+    font-size: 30px;
+    color: #444;
+    transition: all 0.2s ease;
+    float: right;
+}
+
+.rating .star-rating input:not(:checked) ~ label:hover, .rating input:not(:checked) ~ label:hover ~ label {
+    color: #fd4;
+}
+
+.rating .star-rating input:checked ~ label {
+    color: #fd4;
+}
+
+.rating #score {
+    display: none;
+}
