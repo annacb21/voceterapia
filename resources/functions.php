@@ -3,6 +3,8 @@
 require_once("classes/recensione.php");
 require_once("classes/post.php");
 require_once("database.php");
+
+use PHPMailer\PHPMailer\PHPMailer;
 date_default_timezone_set('Etc/UTC');
 
 //*************************** SYSTEM FUNCTIONS ****************************
@@ -182,5 +184,37 @@ echo $pag;
 }
 
 }
+
+//send an email from the contact form
+function send_email() {
+    require 'vendor/autoload.php';
+    if(isset($_POST['sendEmail'])) {
+        $nome = escape_string($_POST['nome']);
+        $cognome = escape_string($_POST['cognome']);
+        $email = escape_string($_POST['email']);
+        $phone = escape_string($_POST['telefono']);
+        $message = escape_string($_POST['messaggio']);
+        $toEmail = "voceterapiaverona@gmail.com"; 
+
+        $mail = new PHPMailer();
+        $mail->setFrom('postmaster@andreacostacurta.it', "Admin");
+        $mail->addReplyTo($email, $nome . " " . $cognome);
+        $mail->addAddress($toEmail, 'Admin'); 
+        $mail->Subject = 'Messaggio da ' . $nome . " " . $cognome;
+        $mail->Body = "Recapito telefonico: " . $phone . "\n";
+        $mail->Body .= $message;
+
+        if($mail->send()) {
+            set_message("La tua email è stata inviata con successo", "alert-success");
+        } 
+        else {
+            set_message("Oops, qualcosa è andato storto: " . $mail->ErrorInfo, "alert-danger");  
+        }
+
+        redirect("contatti.php");
+    }
+
+}
+
 
 ?>
