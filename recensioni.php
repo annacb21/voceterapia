@@ -36,6 +36,7 @@ while($row = fetch_array($query)) {
     <div>
         <h1>Scrivi una recensione</h1>
         <p>I campi contrassegnati con un * sono obbligatori</p>
+        <?php display_message(); ?>
         <form action="" method="POST" class="row g-3 needs-validation" novalidate>
             <div class="col-lg-6">
                 <label for="nome" class="form-label">Nome</label>
@@ -75,7 +76,7 @@ while($row = fetch_array($query)) {
                 <div class="invalid-feedback">Devi accettare le condizioni di privacy per poter pubblicare la recensione</div>
             </div>
             <div class="col-lg-12">
-                <button type="submit" name="pubReview" class="btn btn-primary">Pubblica</button>
+                <button type="submit" name="addReview" class="btn btn-primary">Pubblica</button>
                 <p class="d-inline mx-5">oppure</p>
                 <a href="https://www.google.com/search?q=voce+terapia+verona&oq=voc&aqs=chrome.0.69i59l2j35i39j69i57j46i433i512l2j69i60l2.726j0j7&sourceid=chrome&ie=UTF-8#lrd=0x477f5fb8b9aa42c9:0x2cedbd42565a40bf,3,,," role="button" class="btn btn-warning d-inline" aria-label="aggiungi recensione con Google">Scrivi una recensione tramite Google</a>
             </div>
@@ -150,7 +151,6 @@ for($i=0; $i<count($recensioni); $i++) {
 
     <script src="https://kit.fontawesome.com/90922573b7.js" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
     <script src="js/scrollToTop.js"></script>
     <script src="js/validate.js"></script>
