@@ -216,5 +216,26 @@ function send_email() {
 
 }
 
+// login the admin user
+function login() {
+    if(isset($_POST['login'])) {
+        $username = escape_string($_POST['username']);
+        $psw = escape_string($_POST['psw']);
+
+        $query = query("SELECT * FROM utenti WHERE username = '{$username}' LIMIT 1");
+        confirm($query);
+        $row = fetch_array($query);
+
+        if(mysqli_num_rows($query) == 0 || password_verify($psw, $row['password']) === false) {
+            set_message("La tua password o il tuo username sono sbagliati", "alert-danger");
+            redirect("login.php");
+        }
+        else {
+            $_SESSION['user'] = $row['username'];
+            redirect("admin/");
+        }
+    }
+}
+
 
 ?>
