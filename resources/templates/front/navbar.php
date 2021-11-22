@@ -30,7 +30,7 @@
                 </li>
                 <?php
                     if(isset($_SESSION['user'])) {
-                        echo "<li class='nav-item'><a href='admin/index.php' class='nav-link'>Admin</a></li>";
+                        echo "<li class='nav-item'><a href='admin/admin.php' class='nav-link'>Area Admin</a></li>";
                     }
                 ?>
             </ul>
