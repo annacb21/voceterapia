@@ -95,11 +95,9 @@ while($row = fetch_array($query)) {
 
     <div>
         <h1>Tutte le recensioni</h1>
-        <div>
-            <h2>Dal sito</h2>
-            <div class="glide">
-                <div class="glide__track" data-glide-el="track">
-                    <ul class="glide__slides align-items-center">
+        <div class="glide">
+            <div class="glide__track" data-glide-el="track">
+                <ul class="glide__slides align-items-center">
 <?php 
 foreach($recensioni as $r) {
 $stars = "<div class='row'>";
@@ -146,10 +144,6 @@ for($i=0; $i<count($recensioni); $i++) {
     echo "<button class='glide__bullet' data-glide-dir='={$i}'></button>";
 }
 ?>
-                </div>
-            </div>
-
-            <h2>Da Google</h2>
         </div>
     </div>
     
