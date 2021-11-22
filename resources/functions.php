@@ -232,7 +232,7 @@ function login() {
         }
         else {
             $_SESSION['user'] = $row['username'];
-            redirect("admin/");
+            redirect("admin/admin.php");
         }
     }
 }
