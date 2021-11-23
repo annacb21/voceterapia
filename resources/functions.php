@@ -291,4 +291,16 @@ function get_page_title() {
     echo $title;
 }
 
+// add a review
+function getReviewCode() {
+    if(isset($_POST['codeSubmit'])) {
+        $code = uniqid();
+
+        $query = query("INSERT INTO codici(id, usato) VALUES ('{$code}', 'false')");
+        confirm($query);
+        
+        $_SESSION['code'] = $code;
+    }
+}
+
 ?>
