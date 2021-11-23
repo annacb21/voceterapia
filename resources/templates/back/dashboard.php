@@ -4,10 +4,11 @@ confirm($news_query);
 $tot_row1 = fetch_array($news_query);
 $tot_news = $tot_row1['tot'];
 
-$review_query = query("SELECT COUNT(*) as tot FROM recensioni");
+$review_query = query("SELECT TRUNCATE(AVG(punteggio),1) as media FROM recensioni");
 confirm($review_query);
 $tot_row2 = fetch_array($review_query);
-$tot_rev = $tot_row2['tot'];
+$tot_rev = $tot_row2['media'];
+
 
 $users_query = query("SELECT COUNT(*) as tot FROM utenti");
 confirm($users_query);
@@ -56,7 +57,7 @@ while($row = fetch_array($recent_news_query)) {
             </div>
             <div class="card-body">
                 <p class="h1"><?php echo $tot_rev; ?></p>
-                <p>recensioni sul sito</p>
+                <p>punteggio medio nelle recensioni</p>
             </div>
         </div>
         <div class="card">
