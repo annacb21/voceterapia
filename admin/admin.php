@@ -30,7 +30,7 @@ $row = fetch_array($query);
         <header class="d-flex justify-content-between">
             <h2>
                 <label for="sidebar-toggle"><i class="fas fa-bars"></i></label>
-                
+                <?php get_page_title(); ?>
             </h2>
             <div class="user-wrapper d-flex align-items-center">
                 <img src="../images/admin-profile.png" alt="Icona profilo utente">
@@ -40,7 +40,7 @@ $row = fetch_array($query);
                 </div>
             </div>
         </header>
-        
+        <?php show_admin_content(); ?>
     </div>
 
     <script src="https://kit.fontawesome.com/90922573b7.js" crossorigin="anonymous"></script>
