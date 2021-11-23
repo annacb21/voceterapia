@@ -28,6 +28,18 @@ while($row = fetch_array($recent_news_query)) {
 ?>
 
 <main>
+    <div class="mb-5">
+        <p class="h1 pb-3">Genera codice per recensione</p>
+        <form action="" method="POST" class="row g-3">
+            <?php getReviewCode(); ?>
+            <div class="col-lg-2">
+                <button type="submit" name="codeSubmit" class="btn btn-primary btn-lg">Genera codice</button>
+            </div>
+            <div class="col-lg-4">
+                <input type="text" name="Code" id="Code" value="<?php if(isset($_SESSION['code'])){echo $_SESSION['code'];} else {echo " ";} ?>">
+            </div>
+        </form>
+    </div>
     <div class="cards">
         <div class="card">
             <div class="card-header">
@@ -44,7 +56,7 @@ while($row = fetch_array($recent_news_query)) {
             </div>
             <div class="card-body">
                 <p class="h1"><?php echo $tot_rev; ?></p>
-                <p>recensioni pubblicate</p>
+                <p>recensioni sul sito</p>
             </div>
         </div>
         <div class="card">
