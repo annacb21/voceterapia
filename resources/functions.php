@@ -232,10 +232,63 @@ function login() {
         }
         else {
             $_SESSION['user'] = $row['username'];
-            redirect("admin/admin.php");
+            redirect("admin/");
         }
     }
 }
 
+//*************************** BACK FUNCTIONS ****************************
+
+// show admin dashboard content dynamically
+function show_admin_content() {
+    if($_SERVER['REQUEST_URI'] == "/voceterapia/admin/" || $_SERVER['REQUEST_URI'] == "/voceterapia/admin/admin.php" ) {
+        include(TEMPLATE_BACK . "/dashboard.php");
+    }
+
+    if(isset($_GET['news'])) {
+        include(TEMPLATE_BACK . "/news.php");
+    }
+
+    if(isset($_GET['edit-news'])) {
+        include(TEMPLATE_BACK . "/edit-news.php");
+    }
+
+    if(isset($_GET['delete-news'])) {
+        include(TEMPLATE_BACK . "/delete-news.php");
+    }
+
+    if(isset($_GET['users'])) {
+        include(TEMPLATE_BACK . "/users.php");
+    }
+
+    if(isset($_GET['edit-user'])) {
+        include(TEMPLATE_BACK . "/edit-user.php");
+    }
+
+    if(isset($_GET['logout'])) {
+        include(TEMPLATE_BACK . "/logout.php");
+    }
+}
+
+// set the admin page title dynamically
+function get_page_title() {
+    $title = "";
+    if($_SERVER['REQUEST_URI'] == "/voceterapia/admin/" || $_SERVER['REQUEST_URI'] == "/voceterapia/admin/admin.php" ) {
+        $title = "Dashboard";
+    }
+
+    if(isset($_GET['news'])) {
+        $title = "Gestione news";
+    }
+
+    if(isset($_GET['edit-news'])) {
+        $title = "Modifica news";
+    }
+
+    if(isset($_GET['users'])) {
+        $title = "Gestione utenti";
+    }
+    echo $title;
+}
 
 ?>
