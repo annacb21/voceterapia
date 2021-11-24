@@ -85,11 +85,7 @@ while($row = fetch_array($query)) {
                 <label class="form-check-label" for="checkPrivacy">Dichiaro di aver letto la Privacy Policy e di acconsentire, ai soli fini del servizio richiesto, al trattamento dei miei dati personali.</label>
                 <div class="invalid-feedback">Devi accettare le condizioni di privacy per poter pubblicare la recensione</div>
             </div>
-            <div class="col-lg-12">
-                <button type="submit" name="addReview" class="btn btn-primary">Pubblica</button>
-                <p class="d-inline mx-5">oppure</p>
-                <a href="https://www.google.com/search?q=voce+terapia+verona&oq=voc&aqs=chrome.0.69i59l2j35i39j69i57j46i433i512l2j69i60l2.726j0j7&sourceid=chrome&ie=UTF-8#lrd=0x477f5fb8b9aa42c9:0x2cedbd42565a40bf,3,,," role="button" class="btn btn-warning d-inline" aria-label="aggiungi recensione con Google">Scrivi una recensione tramite Google</a>
-            </div>
+            <button type="submit" name="addReview" class="btn btn-primary">Pubblica</button>
         </form>
     </div>
 
@@ -146,6 +142,7 @@ for($i=0; $i<count($recensioni); $i++) {
 ?>
         </div>
     </div>
+    <div class="elfsight-app-9c4839bc-ad9b-4346-bec2-f2422c7c3122"></div>
     
     <!-- UP BUTTON -->
     <button type="button" class="btn rounded-circle shadow btn-lg" id="upBtn" onclick="backToTop()"><i class="fas fa-chevron-up"></i></button>
@@ -159,6 +156,7 @@ for($i=0; $i<count($recensioni); $i++) {
     <script src="js/scrollToTop.js"></script>
     <script src="js/validate.js"></script>
     <script src="node_modules/@glidejs/glide/dist/glide.min.js"></script>
+    <script src="https://apps.elfsight.com/p/platform.js" defer></script>
     <script>
         new Glide('.glide', {
             type: 'slider',
