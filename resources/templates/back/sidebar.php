@@ -14,6 +14,9 @@
             <li>
                 <a href="admin.php?users" class="<?php if(isset($_GET['users']) || isset($_GET['edit-user'])){echo "admin-active";} else {echo "";} ?>"><i class="fas fa-users"></i><span>Utenti</span></a>
             </li>
+            <li>
+                <a href="admin.php?logout"><i class="fas fa-sign-out-alt"></i><span>Logout</span></a>
+            </li>
         </ul>
     </div>
 </nav>
