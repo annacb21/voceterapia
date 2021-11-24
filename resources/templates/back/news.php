@@ -1,5 +1,5 @@
 <?php
-$query = query("SELECT * FROM news");
+$query = query("SELECT * FROM news ORDER BY data_news DESC");
 confirm($query);
 $news = array();
 $i = 0;
