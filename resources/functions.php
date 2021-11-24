@@ -316,4 +316,17 @@ function addNews() {
     }
 }
 
+// edit post
+function editNews($id) {
+    if(isset($_POST['editNews'])) {
+        $titolo = escape_string($_POST['titolo']);
+        $testo = escape_string($_POST['testo']);
+
+        $query = query("UPDATE news SET titolo = '{$titolo}', testo = '{$testo}' WHERE id = $id");
+        confirm($query);
+        set_message("News modificata con successo", "alert-success");
+        redirect("admin.php?news");
+    } 
+}
+
 ?>
