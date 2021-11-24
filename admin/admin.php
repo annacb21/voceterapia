@@ -3,7 +3,7 @@ require_once("../resources/config.php");
 if(!isset($_SESSION['user'])) {
     redirect("../index.php");
 }
-$query = query("SELECT * FROM utenti WHERE username = '{$_SESSION['user']}' LIMIT 1");
+$query = query("SELECT * FROM utenti WHERE id = '{$_SESSION['user']}' LIMIT 1");
 confirm($query);
 $row = fetch_array($query);
 ?>

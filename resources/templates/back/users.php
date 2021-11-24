@@ -15,13 +15,13 @@ confirm($query);
                 <div class="invalid-feedback">Inserire uno username</div>
             </div>
             <label for="psw1" class="form-label">Password</label>
-            <div class="input-group mb-3" id="password1">
+            <div class="input-group mb-3">
                 <input type="password" class="form-control" placeholder="Password" name="psw1" id="psw1" required>
                 <span class="input-group-text"><i class="fa fa-eye-slash" aria-hidden="true" id="togglePsw1" style="cursor: pointer"></i></span>
                 <div class="invalid-feedback">Inserire una password</div>
             </div>
             <label for="psw2" class="form-label">Conferma password</label>
-            <div class="input-group mb-3" id="password2">
+            <div class="input-group mb-3">
                 <input type="password" class="form-control" placeholder="Conferma password" name="psw2" id="psw2" required>
                 <span class="input-group-text"><i class="fa fa-eye-slash" aria-hidden="true" id="togglePsw2" style="cursor: pointer"></i></span>
                 <div class="invalid-feedback">Le password non corrispondono</div>
@@ -45,7 +45,7 @@ confirm($query);
                     <?php while($row = fetch_array($query)) : ?>
                     <tr>
                         <td><?php echo $row['username']; ?></td>
-                        <td class="d-flex justify-content-start"><a class="btn btn-primary" href="../admin/admin.php?edit-user&id=<?php echo $row['id']; ?>" role="button">Modifica</a></td>
+                        <td class="d-flex justify-content-start"><a class="btn btn-primary" href="../admin/admin.php?edit-user&id=<?php echo $row['id']; ?>" role="button">Modifica password</a></td>
                     </tr>
                     <?php endwhile; ?>
                 </tbody>
@@ -55,7 +55,7 @@ confirm($query);
                     <div class="card shadow rounded mb-2">
                         <div class="card-body">
                             <p class="card-title fw-bolder"><?php echo $row['username']; ?></p>
-                            <a class="btn btn-primary" href="../admin/admin.php?edit-user&id=<?php echo $row['id']; ?>" role="button">Modifica</a>
+                            <a class="btn btn-primary" href="../admin/admin.php?edit-user&id=<?php echo $row['id']; ?>" role="button">Modifica password</a>
                         </div>
                     </div>
                 <?php endwhile; ?>   

@@ -231,7 +231,7 @@ function login() {
             redirect("login.php");
         }
         else {
-            $_SESSION['user'] = $row['username'];
+            $_SESSION['user'] = $row['id'];
             redirect("admin/");
         }
     }
@@ -349,48 +349,23 @@ function addUser() {
     }
 }
 
-function update_account() {
-
-    if(isset($_POST['updateAccount'])) {
-
-        $username = escape_string($_POST['username']);
-        $email = escape_string($_POST['email']);
-
-        $query = query("UPDATE users SET username = '{$username}', email = '{$email}' WHERE user_id = '{$_SESSION['user']}' ");
-        confirm($query);
-
-        set_message("Account modificato con successo", "alert-success");
-        redirect("../admin/index.php?account");
-
-    }
-
-}
-
-// modifica password admin
-function update_password($psw) {
-
-    if(isset($_POST['updatePsw'])) {
-
+// edit user
+function editUser($row) {
+    if(isset($_POST['editUser'])) {
         $current_psw = escape_string($_POST['current_psw']);
-        $new_psw = password_hash(escape_string($_POST['new_psw']), PASSWORD_DEFAULT);
-
-        if(password_verify($current_psw, $psw) === true) {
-
-            $query = query("UPDATE users SET password = '{$new_psw}' WHERE user_id = '{$_SESSION['user']}' ");
+        $psw1 = escape_string($_POST['psw1']);
+        
+        if(password_verify($current_psw, $row['psw']) === true) {
+            $new_psw = password_hash($psw1, PASSWORD_DEFAULT);
+            $query = query("UPDATE utenti SET psw = '{$new_psw}' WHERE id = '{$row['id']}'");
             confirm($query);
-
             set_message("Password modificata con successo", "alert-success");
-
         }
         else {
-        
-            set_message("Password attuale non corretta", "alert-danger");
-
+            set_message("Le password non sono corrette", "alert-danger");
         }
-        redirect("../admin/index.php?account");
-
+        redirect("../admin/admin.php?users");
     }
-
 }
 
 ?>
