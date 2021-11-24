@@ -303,4 +303,17 @@ function getReviewCode() {
     }
 }
 
+// add news
+function addNews() {
+    if(isset($_POST['addNews'])) {
+        $titolo = escape_string($_POST['titolo']);
+        $testo = escape_string($_POST['testo']);
+
+        $query = query("INSERT INTO news(titolo,testo,data_news) VALUES ('{$titolo}', '{$testo}', now())");
+        confirm($query);
+        set_message("News pubblicata con successo", "alert-success");
+        redirect("admin.php?news");
+    }
+}
+
 ?>
