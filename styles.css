@@ -13,6 +13,10 @@
     font-family: 'Montserrat', sans-serif;
 }
 
+.background-light {
+    background-color: var(--bg-color);
+}
+
 .content-padding {
     padding: 1.5% 5% !important;
 }
@@ -74,6 +78,30 @@ p {
     height: 100%;
 }
 
+.card {
+    border: none !important;
+    border-radius: 0.7rem !important;
+    background-color: #FFF !important;
+    padding: 0.6rem 0.8rem;
+}
+
+.card img {
+    width: 3em;
+}
+
+.text-muted {
+    color: var(--mute-text) !important;
+}
+
+.card .card-title {
+    color: var(--main-color) !important;
+    font-weight: 600;
+}
+
+.card .card-text, .card .card-title {
+    line-height: 1.5rem !important;
+}
+
 /* NAVBAR */
 .navbar {
     background-color: var(--main-color) !important;
@@ -122,6 +150,12 @@ p {
 #Formazione img {
     max-width:100%;
     max-height:100%;
+}
+
+/* RECENSIONI */
+.fa-star {
+    font-size: 2rem !important;
+    color: var(--secondary-color) !important;
 }
 
 

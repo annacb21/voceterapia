@@ -78,8 +78,8 @@ while($row = fetch_array($query)) {
             </div>
             <div class="col-lg-6">
                 <label for="recensione" class="form-label">* Recensione</label>
-                <textarea class="form-control" id="recensione" name="recensione" rows="5" placeholder="Scrivi la tua recensione ..." aria-describedby="recHelp" maxlength="410" required></textarea>
-                <div id="recHelp" class="form-text">Lunghezza max. di 410 caratteri</div>
+                <textarea class="form-control" id="recensione" name="recensione" rows="5" placeholder="Scrivi la tua recensione ..." aria-describedby="recHelp" maxlength="500" required></textarea>
+                <div id="recHelp" class="form-text">Lunghezza max. di 500 caratteri</div>
                 <div class="invalid-feedback">Inserire una recensione</div>
             </div>
             <div class="col-lg-12 form-check">

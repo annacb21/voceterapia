@@ -1,14 +1,13 @@
 <?php 
 require_once("resources/config.php"); 
-$query = query("SELECT * FROM recensioni ORDER BY data_rec DESC LIMIT 4");
+$query = query("SELECT * FROM recensioni ORDER BY data_rec DESC LIMIT 3");
 confirm($query);
 $recensioni = array();
 $i = 0;
 while($row = fetch_array($query)) {
-    $d = $row['data_rec'];
-    setlocale(LC_TIME, 'it_IT');
-    $pdate = strftime("%d %B %Y", strtotime($d));
-    $recensioni[$i] = new Recensione($row['id'], $row['autore'], $row['foto_autore'], $row['titolo'], $row['testo'], $row['punteggio'], $d);
+    $d = date_create($row['data_rec']);
+    $pdate = date_format($d, 'd/m/y');
+    $recensioni[$i] = new Recensione($row['id'], $row['autore'], $row['foto_autore'], $row['titolo'], $row['testo'], $row['punteggio'], $pdate);
     $i++;
 }
 ?>
@@ -48,7 +47,7 @@ while($row = fetch_array($query)) {
     </div>
 
     <!-- VOCETERAPIA -->
-    <div class="my-5">
+    <div class="py-5 background-light">
         <div class="content-padding text-center">
             <h2 class="pb-4">Cos'è la voceterapia?</h2>
             <p class="pb-4">La voce è lo strumento più naturale che esista. </br>
@@ -60,7 +59,7 @@ while($row = fetch_array($query)) {
             </p>
             <a href="voceterapia.php" role="button" class="btn more-btn" aria-label="Approfondisci">Approfondisci <span><i class="fas fa-arrow-right"></i></span></a>
         </div>
-        <figure class="py-4">
+        <figure class="pt-4 pb-5">
             <div class="d-flex position-absolute w-100 justify-content-between quote-container">
                 <div class="left-quote">
                     <img src="images/left-quotes-sign.svg" alt="left quote image">
@@ -88,7 +87,7 @@ while($row = fetch_array($query)) {
                 </div>
                 <div class="col-lg-9">
                     <div class="row full-height ps-4">
-                        <div>
+                        <div class="text-justify">
                             <p>Dopo il conseguimento del Diploma di Canto con 10 e lode, ho conseguito la laurea in Filosofia con 110 e lode.
                             Ho pubblicato un articolo relativo alla tesi di laurea “Sul Compendium musicae” di Cartesio nella Rivista Musicologica “Quaderni di musicologia” ed ho vinto il concorso come Coordinatore dei Servizi Musicali della Fondazione Arena.
                             Ho Iniziato la carriera della solista 20 anni fa affiancando l’attività artistica a quella didattica.
@@ -108,15 +107,16 @@ while($row = fetch_array($query)) {
     </div>
 
     <!-- RECENSIONI -->
-    <div>
-        <h2>Ultime recensioni</h2>
-        <div class="row">
+    <div class="background-light pb-5">
+        <div class="content-padding">
+            <h2 class="py-4 text-center">Dicono di me ...</h2>
+            <div class="row py-4">
 <?php
 foreach($recensioni as $r) {
-$stars = "<div class='row'>";
+$stars = "<div class='text-center'>";
 for($i=0; $i<$r->get_punteggio(); $i++) {
 $stars .= <<<DELIMETER
-<div class="col-lg-1">
+<div class="d-inline">
     <i class="fas fa-star"></i>
 </div>
 DELIMETER;
@@ -133,24 +133,26 @@ $review = <<<DELIMETER
 <div class="col-lg-4">
     <div class="card">
         <div class="card-body">
-            <div class="row">
-                <div class="col-lg-1">
-                    <img src="images/{$r->get_foto_autore()}" style="width: 2em;" alt="foto autore recensione">
+            <div class="row pb-3 align-items-center">
+                <div class="col-lg-2">
+                    <img src="images/{$r->get_foto_autore()}" alt="foto autore recensione">
                 </div>
-                <div class="col-lg-4">
+                <div class="col-lg-10">
                     <p class="card-subtitle text-muted">{$r->get_autore()}</p>
                 </div>
             </div>
-            <p class="card-title">{$r->get_titolo()}</p>
-            <p class="card-text">{$r->get_testo()}</p>
+            <p class="card-title pb-2">{$r->get_titolo()}</p>
+            <p class="card-text text-justify">{$r->get_testo()}</p>
+            <p class='text-muted'>{$r->get_data()}</p>
 DELIMETER;
 $review .= $stars;
-$review .= "<p class='text-muted'>{$r->get_data()}</p></div></div></div>";
+$review .= "</div></div></div>";
 echo $review;
 }
 ?>
+            </div>
+            <a href="recensioni.php" role="button" class="btn more-btn float-end" aria-label="Tutte le recensioni">Tutte le recensioni <span><i class="fas fa-arrow-right"></i></span></a>
         </div>
-        <a href="recensioni.php" role="button" class="btn more-btn" aria-label="Tutte le recensioni">Tutte le recensioni <span><i class="fas fa-arrow-right"></i></span></a>
     </div>
 
     <!-- UP BUTTON -->
