@@ -56,7 +56,7 @@ while($row = fetch_array($query)) {
         Il corpo, attraverso la voce, parla la lingua delle emozioni.
         Il mio ruolo è aiutarti a capire meglio come farla tua.
         </p>
-        <a href="voceterapia.php" role="button" class="btn btn-primary" aria-label="Approfondisci">Approfondisci <span><i class="fas fa-arrow-right"></i></span></a>
+        <a href="voceterapia.php" role="button" class="btn more-btn" aria-label="Approfondisci">Approfondisci <span><i class="fas fa-arrow-right"></i></span></a>
         <figure>
             <blockquote class="blockquote">
                 <p>“Se canti solo con la voce, prima o poi dovrai tacere. Canta con il cuore, affinché tu non debba mai tacere.”</p>
@@ -85,7 +85,7 @@ while($row = fetch_array($query)) {
                         Mi sono anche dedicata all’impostazione, rieducazione vocale e respiratoria, di adulti ed adolescenti con problematiche nel meccanismo pneumofonico e conseguenti difficoltà di comunicazione.
                         Ho tenuto corsi di impostazione vocale e canto (lirico e leggero) in scuole private, per studenti del Conservatorio e corsi di musica nella scuola pubblica sia come esperta esterna che come docente interna. 
                         </p>
-                        <a href="formazione.php" role="button" class="btn btn-primary" aria-label="Approfondisci">Approfondisci <span><i class="fas fa-arrow-right"></i></span></a>
+                        <a href="formazione.php" role="button" class="btn more-btn" aria-label="Approfondisci">Approfondisci <span><i class="fas fa-arrow-right"></i></span></a>
                     </div>
                 </div>
             </div>
@@ -135,7 +135,7 @@ echo $review;
 }
 ?>
         </div>
-        <a href="recensioni.php" role="button" class="btn btn-primary" aria-label="Tutte le recensioni">Tutte le recensioni <span><i class="fas fa-arrow-right"></i></span></a>
+        <a href="recensioni.php" role="button" class="btn more-btn" aria-label="Tutte le recensioni">Tutte le recensioni <span><i class="fas fa-arrow-right"></i></span></a>
     </div>
 
     <!-- UP BUTTON -->

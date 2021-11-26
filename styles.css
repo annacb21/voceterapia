@@ -18,6 +18,22 @@ h1, h2, h3, .navbar-brand {
     text-transform: uppercase;
 }
 
+.more-btn {
+    color: var(--main-color) !important;
+    background-color: var(--secondary-color) !important;
+    border-color: var(--secondary-color) !important;
+    border-radius: 1.2rem !important;
+    padding: 0.5rem 2rem !important;
+    font-weight: 600 !important;
+}
+
+.more-btn span {
+    padding-left: 1rem;
+}
+
+
+
+
 .glide__bullets {
     bottom: 0 !important;
 }

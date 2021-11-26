@@ -59,7 +59,7 @@
                     </p>
                 </div>
                 <div>
-                    <a href="http://www.elisafortunati.it/home.html" role="button" class="btn btn-primary" aria-label="sito personale">Sito personale <span><i class="fas fa-arrow-right"></i></span></a>
+                    <a href="http://www.elisafortunati.it/home.html" role="button" class="btn more-btn" aria-label="sito personale">Sito personale <span><i class="fas fa-arrow-right"></i></span></a>
                 </div>
             </div>
         </div>
