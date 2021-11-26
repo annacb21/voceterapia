@@ -30,6 +30,10 @@ h3 {
     color: var(--light-text) !important;
 }
 
+p {
+    line-height: 2rem;
+}
+
 .more-btn {
     color: var(--main-color) !important;
     background-color: var(--secondary-color) !important;

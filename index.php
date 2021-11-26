@@ -48,17 +48,19 @@ while($row = fetch_array($query)) {
     </div>
 
     <!-- VOCETERAPIA -->
-    <div>
-        <h2>Cos'è la voceterapia?</h2>
-        <p>La voce è lo strumento più naturale che esista.
-        Ciascuno di noi nasce con questa “dotazione”, personalissima ed unica, che lo rende per questo speciale e irripetibile.
-        Ciascuna voce è, però, non solo legata alle nostre caratteristiche fisiche e morfologiche  ma anche alla storia soggettiva, ai vissuti, che fanno parte di noi e che, in qualche modo,  anche il nostro strumento vocale racconta.
-        Lavorando quindi sul nostro principale e immediato mezzo di comunicazione, si entra in un campo di analisi che è anche “altro” rispetto a quello semplicemente canoro o verbale, in virtù di questa connessione inedita tra voce e anima, tra parola e inconscio.
-        Il corpo, attraverso la voce, parla la lingua delle emozioni.
-        Il mio ruolo è aiutarti a capire meglio come farla tua.
-        </p>
-        <a href="voceterapia.php" role="button" class="btn more-btn" aria-label="Approfondisci">Approfondisci <span><i class="fas fa-arrow-right"></i></span></a>
-        <figure class="my-5">
+    <div class="my-5">
+        <div class="content-padding text-center">
+            <h2 class="pb-4">Cos'è la voceterapia?</h2>
+            <p class="pb-4">La voce è lo strumento più naturale che esista. </br>
+            Ciascuno di noi nasce con questa “dotazione”, personalissima ed unica, che lo rende per questo speciale e irripetibile. </br>
+            Ciascuna voce è, però, non solo legata alle nostre caratteristiche fisiche e morfologiche  ma anche alla storia soggettiva, ai vissuti, che fanno parte di noi e che, in qualche modo,  anche il nostro strumento vocale racconta.
+            Lavorando quindi sul nostro principale e immediato mezzo di comunicazione, si entra in un campo di analisi che è anche “altro” rispetto a quello semplicemente canoro o verbale, in virtù di questa connessione inedita tra voce e anima, tra parola e inconscio.
+            Il corpo, attraverso la voce, parla la lingua delle emozioni.
+            Il mio ruolo è aiutarti a capire meglio come farla tua.
+            </p>
+            <a href="voceterapia.php" role="button" class="btn more-btn" aria-label="Approfondisci">Approfondisci <span><i class="fas fa-arrow-right"></i></span></a>
+        </div>
+        <figure class="py-4">
             <div class="d-flex position-absolute w-100 justify-content-between quote-container">
                 <div class="left-quote">
                     <img src="images/left-quotes-sign.svg" alt="left quote image">
