@@ -58,12 +58,18 @@ while($row = fetch_array($query)) {
         </p>
         <a href="voceterapia.php" role="button" class="btn more-btn" aria-label="Approfondisci">Approfondisci <span><i class="fas fa-arrow-right"></i></span></a>
         <figure>
+            <div class="left-quote">
+                <img src="images/left-quotes-sign.svg" alt="left quote image">
+            </div>
             <blockquote class="blockquote">
-                <p>“Se canti solo con la voce, prima o poi dovrai tacere. Canta con il cuore, affinché tu non debba mai tacere.”</p>
+                <p>“La voce umana è il più bello strumento che esista, ma è anche il più difficile da suonare.”</p>
             </blockquote>
             <figcaption class="blockquote-footer">
-                <cite title="Source Title">Augusto Daolio</cite>
+                <cite title="Source Title">(Richard Strauss)</cite>
             </figcaption>
+            <div class="right-quote">
+                <img src="images/right-quotes-sign.svg" alt="right quote image">
+            </div>
         </figure>
     </div>
 

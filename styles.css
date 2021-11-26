@@ -16,6 +16,7 @@
 h1, h2, h3, .navbar-brand {
     font-family: 'EB Garamond', serif;
     text-transform: uppercase;
+    color: var(--main-color) !important;
 }
 
 .more-btn {
@@ -30,6 +31,47 @@ h1, h2, h3, .navbar-brand {
 .more-btn span {
     padding-left: 1rem;
 }
+
+.left-quote, .right-quote {
+    position: absolute;
+}
+
+.left-quote {
+    bottom: 8rem;
+}
+
+.left-quote img, .right-quote img {
+    width: 100px;
+}
+
+.right-quote {
+    right: 0;
+    bottom: 4rem;
+}
+
+.blockquote p{
+    text-align: center;
+    font-family: 'EB Garamond', serif;
+    font-size: 2.3rem;
+    color: var(--main-color) !important;
+    font-style: italic;
+    font-weight: 500;
+}
+
+.blockquote-footer {
+    float: right;
+    padding-right: 4rem;
+    color: var(--main-color) !important;
+}
+
+
+
+
+
+
+
+
+
 
 
 
