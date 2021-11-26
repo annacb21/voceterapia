@@ -52,9 +52,19 @@ p {
     padding-left: 1rem;
 }
 
-.more-btn:hover {
+.more-btn:hover, .form-btn:hover {
     transform: scale(1.01);
     box-shadow: 0px 0px 10px 0px rgba(42, 39, 46, 0.1) !important;
+}
+
+.form-btn {
+    background-color: var(--main-color) !important;
+    color: var(--secondary-color) !important;
+    border-radius: 0.7rem !important;
+    padding: 0.9rem 1rem !important;
+    text-transform: uppercase;
+    font-weight: 600 !important;
+    transition: 0.2s;
 }
 
 .quote-container {
@@ -105,10 +115,6 @@ p {
     line-height: 1.5rem !important;
 }
 
-.card:hover {
-    transform: scale(1.05);
-}
-
 .text-muted {
     color: var(--mute-text) !important;
 }
@@ -123,6 +129,10 @@ p {
     background-color: var(--secondary-color) !important;
     color: var(--main-color) !important;
     text-transform: uppercase;
+}
+
+.bottom-border {
+    border-bottom: 2.5px solid var(--secondary-color);
 }
 
 /* NAVBAR */
@@ -196,9 +206,13 @@ footer a {
 }
 
 /* RECENSIONI HOME */
-.fa-star {
+#Recensioni .fa-star {
     font-size: 2rem !important;
     color: var(--secondary-color) !important;
+}
+
+#Recensioni .card:hover {
+    transform: scale(1.05);
 }
 
 /* FORMAZIONE */
@@ -226,25 +240,21 @@ footer a {
     max-height:100%;
 }
 
-
-
-
-
-
+/* RECENSIONI */
 .glide__bullets {
     bottom: 0 !important;
 }
 
 .glide__bullet {
-    background-color: azure !important;
+    background-color: var(--mute-text) !important;
 }
 
 .glide__bullet--active {
-    background-color: aqua !important;
+    background-color: var(--secondary-color) !important;
 }
 
 .glide__bullet:hover, .glide__bullet:focus {
-    border: 2px solid aqua !important;
+    border: 2px solid var(--secondary-color) !important;
 }
 
 .glide__slides {
@@ -255,22 +265,31 @@ footer a {
     display: none;
 }
 
+.rating .star-rating {
+    float: left;
+}
+
 .rating .star-rating label {
     font-size: 30px;
-    color: #444;
+    color: var(--mute-text);
     transition: all 0.2s ease;
     float: right;
 }
 
 .rating .star-rating input:not(:checked) ~ label:hover, .rating input:not(:checked) ~ label:hover ~ label {
-    color: #fd4;
+    color: var(--secondary-color);
 }
 
 .rating .star-rating input:checked ~ label {
-    color: #fd4;
+    color: var(--secondary-color);
 }
 
 .rating #score {
     display: none;
+}
+
+#AllReviews .fa-star {
+    font-size: 2rem !important;
+    color: var(--secondary-color) !important;
 }
 

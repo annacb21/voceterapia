@@ -107,7 +107,7 @@ while($row = fetch_array($query)) {
     </div>
 
     <!-- RECENSIONI -->
-    <div class="background-light pb-5">
+    <div id="Recensioni" class="background-light pb-5">
         <div class="content-padding">
             <h2 class="py-4 text-center">Dicono di me ...</h2>
             <div class="row py-4">
