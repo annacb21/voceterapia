@@ -41,7 +41,7 @@ while($row = fetch_array($query)) {
                 <p>Insegnante di</p>
                 <h1>Voceterapia</h1>
             </div>
-            <div class="col-lg-4">
+            <div class="col-lg-6">
                 <img src="images/elisa1.png" alt="foto elisa fortunati">
             </div>
         </div>
@@ -79,24 +79,28 @@ while($row = fetch_array($query)) {
     </div>
 
     <!-- FORMAZIONE -->
-    <div>
-        <h2>Formazione</h2>
-        <div class="row">
-            <div class="col-lg-4">
-                <img src="images/pripia7.jpg" alt="foto elisa fortunati">
-            </div>
-            <div class="col-lg-8">
-                <div class="row">
-                    <div>
-                        <p>Dopo il conseguimento del Diploma di Canto con 10 e lode, ho conseguito la laurea in Filosofia con 110 e lode.
-                        Ho pubblicato un articolo relativo alla tesi di laurea “Sul Compendium musicae” di Cartesio nella Rivista Musicologica “Quaderni di musicologia” ed ho vinto il concorso come Coordinatore dei Servizi Musicali della Fondazione Arena.
-                        Ho Iniziato la carriera della solista 20 anni fa affiancando l’attività artistica a quella didattica.
-                        Appassionata da sempre di canto e voce, ho seguito corsi con i migliori maestri ed esperti della tecnica vocale, con particolare attenzione alle seguenti problematiche: respirazione, postura, collegamento del fiato col suono, ginnastica facciale, ortoepia, articolazione sillabica, ginnastica facciale e dizione.
-                        Ho tenuto quindi corsi di canto, respirazione e percezione corporea ed, in stretta collaborazione con psicologi e specialisti di disturbi infantili e adolescenziali, ho effettuato con successo attività di supporto a problemi di balbuzie e/o difficoltà emotiva, utilizzando la musica, tecniche di respirazione e vocali.
-                        Mi sono anche dedicata all’impostazione, rieducazione vocale e respiratoria, di adulti ed adolescenti con problematiche nel meccanismo pneumofonico e conseguenti difficoltà di comunicazione.
-                        Ho tenuto corsi di impostazione vocale e canto (lirico e leggero) in scuole private, per studenti del Conservatorio e corsi di musica nella scuola pubblica sia come esperta esterna che come docente interna. 
-                        </p>
-                        <a href="formazione.php" role="button" class="btn more-btn" aria-label="Approfondisci">Approfondisci <span><i class="fas fa-arrow-right"></i></span></a>
+    <div id="Formazione">
+        <div class="content-padding">
+            <h2 class="py-4">Su di me ...</h2>
+            <div class="row pb-4">
+                <div class="col-lg-3">
+                    <img src="images/elisa2.png" alt="foto elisa fortunati">
+                </div>
+                <div class="col-lg-9">
+                    <div class="row full-height ps-4">
+                        <div>
+                            <p>Dopo il conseguimento del Diploma di Canto con 10 e lode, ho conseguito la laurea in Filosofia con 110 e lode.
+                            Ho pubblicato un articolo relativo alla tesi di laurea “Sul Compendium musicae” di Cartesio nella Rivista Musicologica “Quaderni di musicologia” ed ho vinto il concorso come Coordinatore dei Servizi Musicali della Fondazione Arena.
+                            Ho Iniziato la carriera della solista 20 anni fa affiancando l’attività artistica a quella didattica.
+                            Appassionata da sempre di canto e voce, ho seguito corsi con i migliori maestri ed esperti della tecnica vocale, con particolare attenzione alle seguenti problematiche: respirazione, postura, collegamento del fiato col suono, ginnastica facciale, ortoepia, articolazione sillabica, ginnastica facciale e dizione.
+                            Ho tenuto quindi corsi di canto, respirazione e percezione corporea ed, in stretta collaborazione con psicologi e specialisti di disturbi infantili e adolescenziali, ho effettuato con successo attività di supporto a problemi di balbuzie e/o difficoltà emotiva, utilizzando la musica, tecniche di respirazione e vocali.
+                            Mi sono anche dedicata all’impostazione, rieducazione vocale e respiratoria, di adulti ed adolescenti con problematiche nel meccanismo pneumofonico e conseguenti difficoltà di comunicazione.
+                            Ho tenuto corsi di impostazione vocale e canto (lirico e leggero) in scuole private, per studenti del Conservatorio e corsi di musica nella scuola pubblica sia come esperta esterna che come docente interna. 
+                            </p>
+                        </div>
+                        <div class="align-self-end pb-3">
+                            <a href="formazione.php" role="button" class="btn more-btn" aria-label="Approfondisci">Approfondisci <span><i class="fas fa-arrow-right"></i></span></a>
+                        </div>
                     </div>
                 </div>
             </div>
