@@ -83,14 +83,11 @@ p {
     border-radius: 0.7rem !important;
     background-color: #FFF !important;
     padding: 0.6rem 0.8rem;
+    transition: 0.2s;
 }
 
 .card img {
     width: 3em;
-}
-
-.text-muted {
-    color: var(--mute-text) !important;
 }
 
 .card .card-title {
@@ -100,6 +97,26 @@ p {
 
 .card .card-text, .card .card-title {
     line-height: 1.5rem !important;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+.text-muted {
+    color: var(--mute-text) !important;
+}
+
+#upBtn {
+    display: none;
+    position: fixed;
+    bottom: 2em;
+    right: 3.5%;
+    z-index: 99;
+    font-size: 1.5rem !important;
+    background-color: var(--secondary-color) !important;
+    color: var(--main-color) !important;
+    text-transform: uppercase;
 }
 
 /* NAVBAR */

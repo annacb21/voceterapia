@@ -131,7 +131,7 @@ DELIMETER;
 $stars .= "</div>";
 $review = <<<DELIMETER
 <div class="col-lg-4">
-    <div class="card">
+    <div class="card mx-2">
         <div class="card-body">
             <div class="row pb-3 align-items-center">
                 <div class="col-lg-2">
