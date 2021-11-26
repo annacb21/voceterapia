@@ -34,14 +34,15 @@ while($row = fetch_array($query)) {
     <?php include(TEMPLATE_FRONT . DS . "navbar.php"); ?>
 
     <!-- HEADER -->
-    <div id="Header">
-        <div class="row">
-            <div class="col-lg-8">
-                <p>Insegnate di</p>
+    <div id="Header" class="content-padding">
+        <div class="row align-items-center">
+            <div class="col-lg-6">
+                <p class="header-subtitle">Elisa Fortunati</p>
+                <p>Insegnante di</p>
                 <h1>Voceterapia</h1>
             </div>
             <div class="col-lg-4">
-                <img src="images/grigio-ginocchio.jpg" alt="foto elisa fortunati">
+                <img src="images/elisa1.png" alt="foto elisa fortunati">
             </div>
         </div>
     </div>

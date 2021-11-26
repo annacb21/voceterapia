@@ -77,6 +77,26 @@ h3 {
     font-weight: 500;
 }
 
+/* HEADER */
+#Header {
+    background-color: var(--main-color);
+    text-align: center;
+}
+
+#Header p, #Header h1 {
+    font-family: 'EB Garamond', serif !important;
+    color: var(--light-text) !important;
+}
+
+#Header .header-subtitle {
+    font-size: 2rem;
+    font-weight: 500;
+}
+
+#Header h1 {
+    font-size: 4rem;
+}
+
 
 
 
