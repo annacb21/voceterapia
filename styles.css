@@ -10,6 +10,12 @@
 
 * {
     list-style-type: none;
+    font-family: 'Montserrat', sans-serif;
+}
+
+h1, h2, h3, .navbar-brand {
+    font-family: 'EB Garamond', serif;
+    text-transform: uppercase;
 }
 
 .glide__bullets {
