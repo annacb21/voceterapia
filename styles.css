@@ -213,6 +213,18 @@ footer a {
     max-height:100%;
 }
 
+/* CANTO */
+.subtitle {
+    font-family: 'EB Garamond', serif !important;
+    color: var(--main-color);
+    font-size: 2rem;
+    font-weight: 500;
+}
+
+#Canto img {
+    max-width:100%;
+    max-height:100%;
+}
 
 
 

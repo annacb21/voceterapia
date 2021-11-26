@@ -20,43 +20,59 @@
     <?php include(TEMPLATE_FRONT . DS . "navbar.php"); ?>
 
     <!-- MAIN CONTENT -->
-    <h1>Lezioni di canto lirico e pop</h1>
-    <div class="card">
-        <div class="card-body">
-            <div class="row">
-                <div class="col-lg-4">
-                    <p class="card-title">Modalità:</p>
+    <div id="Canto" class="content-padding background-light">
+        <h1 class="text-center py-4">Lezioni di canto lirico e pop</h1>
+        <div class="row">
+            <div class="col-lg-6">
+                <div class="row">
+                    <div class="card p-4">
+                        <div class="card-body">
+                            <div class="row">
+                                <div class="col-lg-4">
+                                    <p class="card-title">Modalità:</p>
+                                </div>
+                                <div class="col-lg-8">
+                                    <p class="card-text">In presenza oppure online</p>
+                                </div>
+                                <div class="col-lg-4">
+                                    <p class="card-title">Indicata per:</p>
+                                </div>
+                                <div class="col-lg-8">
+                                    <p class="card-text">cantanti professionisti e amatoriali</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="pt-5 align-self-end">
+                        <p class="subtitle pb-2">Gli effetti positivi della musica sul nostro cervello</p>
+                        <p>È ormai risaputo che la musica ha effetti positivi sul nostro cervello poiché favorisce il rilascio di dopamina, un neurotrasmettitore in grado di ridurre in modo naturale lo stress e il dolore, contribuendo al benessere psico-fisico e aiutando il rilassamento e la concentrazione.
+                        La dopamina inoltre presiede alle attività della produzione linguistica, dell’attenzione, del piacere e della sessualità, favorendo la memorizzazione delle esperienze.
+                        La musica e il canto, in particolare modo, attivando specifici neurotrasmettitori del benessere, favoriscono uno scambio importante tra i due emisferi del cervello, in quanto stimolano sia l’emisfero destro, deputato alla creatività, all’aspetto affettivo e all’intuizione, sia quello sinistro, più improntato invece su aspetti verbali e logici.
+                        </p>
+                    </div>
                 </div>
-                <div class="col-lg-8">
-                    <p class="card-text">In presenza oppure online</p>
+            </div>
+            <div class="col-lg-6 ps-5">
+                <div>
+                    <img src="images/canto.jpg" alt="foto spartito">
                 </div>
-                <div class="col-lg-4">
-                    <p class="card-title">Indicata per:</p>
-                </div>
-                <div class="col-lg-8">
-                    <p class="card-text">cantanti professionisti e amatoriali</p>
+                <div class="pt-4">
+                    <a href="contatti#EmailForm" role="button" class="btn more-btn" aria-label="prenota">Prenota una lezione <span><i class="fas fa-graduation-cap"></i></span></a>
                 </div>
             </div>
         </div>
+        
+        <div class="py-5">
+            <p class="subtitle pb-2">Perché cantare è importante?</p>
+            <p>Perché il canto è in grado di avere influssi e connettere entrambi gli emisferi cerebrali nell’elaborazione delle parole e della melodia.
+            In tale contesto il detto “canta che ti passa” ha un suo perché, scientificamente fondato.
+            Questa duplice funzione del canto aiuta a metterci in connessione più profonda e integrata con noi stessi, a conoscerci meglio e a liberare la nostra parte creativa attraverso la semplice produzione vocale.
+            Il canto è inoltre un’attività affascinante e meravigliosa, è la ricerca del nostro “suono interiore” più intimo e vero, che ci fa innamorare di questa disciplina non appena ci avviciniamo ad essa.
+            Durante il percorso di studi ti aiuterò a comprendere che si canta nel corpo e con il corpo, poiché la voce, che lo abita, ne è parte integrante. Soprattutto perché il canto dispiega un’area intermedia di risonanza interiore e di nuova consapevolezza di sè, come congiunzione mente-corpo, dove il trait d’union è dato dall’ azionamento dei muscoli preposti alla fonazione, che permettono l’amplificazione della nostra voce.
+            </p>
+        </div>
     </div>
-    <img src="images/canto.png" alt="" style="width: 55em;">
-    <div>
-        <h2>Gli effetti positivi della musica sul nostro cervello</h2>
-        <p>È ormai risaputo che la musica ha effetti positivi sul nostro cervello poiché favorisce il rilascio di dopamina, un neurotrasmettitore in grado di ridurre in modo naturale lo stress e il dolore, contribuendo al benessere psico-fisico e aiutando il rilassamento e la concentrazione.
-        La dopamina inoltre presiede alle attività della produzione linguistica, dell’attenzione, del piacere e della sessualità, favorendo la memorizzazione delle esperienze.
-        La musica e il canto, in particolare modo, attivando specifici neurotrasmettitori del benessere, favoriscono uno scambio importante tra i due emisferi del cervello, in quanto stimolano sia l’emisfero destro, deputato alla creatività, all’aspetto affettivo e all’intuizione, sia quello sinistro, più improntato invece su aspetti verbali e logici.
-        </p>
-    </div>
-    <div>
-        <h2>Perché cantare è importante?</h2>
-        <p>Perché il canto è in grado di avere influssi e connettere entrambi gli emisferi cerebrali nell’elaborazione delle parole e della melodia.
-        In tale contesto il detto “canta che ti passa” ha un suo perché, scientificamente fondato.
-        Questa duplice funzione del canto aiuta a metterci in connessione più profonda e integrata con noi stessi, a conoscerci meglio e a liberare la nostra parte creativa attraverso la semplice produzione vocale.
-        Il canto è inoltre un’attività affascinante e meravigliosa, è la ricerca del nostro “suono interiore” più intimo e vero, che ci fa innamorare di questa disciplina non appena ci avviciniamo ad essa.
-        Durante il percorso di studi ti aiuterò a comprendere che si canta nel corpo e con il corpo, poiché la voce, che lo abita, ne è parte integrante. Soprattutto perché il canto dispiega un’area intermedia di risonanza interiore e di nuova consapevolezza di sè, come congiunzione mente-corpo, dove il trait d’union è dato dall’ azionamento dei muscoli preposti alla fonazione, che permettono l’amplificazione della nostra voce.
-        </p>
-    </div>
-    <div id="canto-quote">
+    <div id="canto-quote" class="pb-5 background-light">
         <figure>
             <div class="d-flex position-absolute w-100 justify-content-between quote-container">
                 <div class="left-quote">
@@ -74,17 +90,19 @@
             </figcaption>
         </figure>
     </div>
-    <p>La sensazione che si prova in tali frangenti è sentirsi pervadere dalla vibrazione del nostro corpo e della nostra stessa voce!!! Le lezioni di canto ti porteranno a scoprire come si possa 
-    favorire o ostacolare il libero fluire della voce e come sviluppare nel tempo una piena consapevolezza della morbida elasticità del corpo.
-    Durante lo studio ti guiderò nel prendere coscienza di come la tua voce possa cambiare e migliorare, modificando solo la respirazione o altre volte allenando muscoli di cui nemmeno 
-    ricordavi l’esistenza, perché poco sviluppati o contratti …ognuno farà la propria esperienza e il proprio percorso personale.
-    </p>
-    <div>
-        <h2>Il canto come “viaggio” alla scoperta di sè</h2>
-        <p>Avvicinarsi al canto è quindi come poter fare un viaggio in se stessi, esaminando ed esperendo la propria voce, ma anche un nuovo modo di mettersi in ascolto di sé.
-        Difatti chi si registra tende a non riconoscere il proprio canto, dato che analizza i suoni con il suo “orecchio interno”: questo perché ciascuno di noi è uno “strumento” che produce il suono e, al contempo, lo ascolta.
-        Ecco allora che l’“orecchio esterno” dell’insegnante ti aiuterà a capire come produrre meglio il tuo suono e insieme lavoreremo perché questo processo sia ogni giorno più facile e spontaneo.
+    <div class="content-padding background-light pt-5">
+        <p>La sensazione che si prova in tali frangenti è sentirsi pervadere dalla vibrazione del nostro corpo e della nostra stessa voce!!! Le lezioni di canto ti porteranno a scoprire come si possa 
+        favorire o ostacolare il libero fluire della voce e come sviluppare nel tempo una piena consapevolezza della morbida elasticità del corpo.
+        Durante lo studio ti guiderò nel prendere coscienza di come la tua voce possa cambiare e migliorare, modificando solo la respirazione o altre volte allenando muscoli di cui nemmeno 
+        ricordavi l’esistenza, perché poco sviluppati o contratti …ognuno farà la propria esperienza e il proprio percorso personale.
         </p>
+        <div class="pt-4">
+            <p class="subtitle pb-2">Il canto come “viaggio” alla scoperta di sè</p>
+            <p>Avvicinarsi al canto è quindi come poter fare un viaggio in se stessi, esaminando ed esperendo la propria voce, ma anche un nuovo modo di mettersi in ascolto di sé.
+            Difatti chi si registra tende a non riconoscere il proprio canto, dato che analizza i suoni con il suo “orecchio interno”: questo perché ciascuno di noi è uno “strumento” che produce il suono e, al contempo, lo ascolta.
+            Ecco allora che l’“orecchio esterno” dell’insegnante ti aiuterà a capire come produrre meglio il tuo suono e insieme lavoreremo perché questo processo sia ogni giorno più facile e spontaneo.
+            </p>
+        </div>
     </div>
 
     <!-- UP BUTTON -->
