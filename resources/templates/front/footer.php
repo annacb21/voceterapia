@@ -1,7 +1,7 @@
 <footer class="bg-dark text-white">
     <div class="row">
         <div class="col-lg-4">
-            <h4>Navigazione</h4>
+            <h3>Navigazione</h3>
             <ul class="nav flex-column">
                 <li class="nav-item">
                     <a class="nav-link" href="index.php">Home</a>
@@ -27,7 +27,7 @@
             </ul>
         </div>
         <div class="col-lg-4">
-            <h4>Contatti</h4>
+            <h3>Contatti</h3>
             <p><i class="fas fa-at"></i> <span>elisa.fortunati@virgilio.it</span></p>
             <a href="#"><i class="fab fa-facebook"></i> <span>Elisa Fortunati</span></a>
             <a href="#"><i class="fab fa-instagram"></i> <span>@elisafortunati</span></a>
@@ -35,11 +35,11 @@
         <div class="col-lg-4">
             <div class="row">
                 <div>
-                    <h4>Dove trovarmi</h4>
+                    <h3>Dove trovarmi</h3>
                     <p>Verona (VR), zona centro storico</p>
                 </div>
                 <div>
-                    <h4>Sito personale</h4>
+                    <h3>Sito personale</h3>
                     <a href="http://www.elisafortunati.it/home.html">www.elisafortunati.it</a>
                 </div>
             </div>
