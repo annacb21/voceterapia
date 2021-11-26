@@ -130,7 +130,23 @@ p {
     font-weight: 500;
 }
 
-/* HEADER */
+/* FOOTER */
+footer {
+    background-color: var(--main-color);
+    color: var(--light-text);
+    font-weight: 300 !important;
+}
+
+footer a {
+    color: var(--light-text) !important;
+    text-decoration: none;
+}
+
+.fa-at, .fa-facebook, .fa-instagram {
+    font-size: 1.5rem;
+}
+
+/* HEADER HOME */
 #Header {
     background-color: var(--main-color);
     text-align: center;
@@ -154,7 +170,7 @@ p {
     max-width: 500px;
 }
 
-/* FORMAZIONE */
+/* FORMAZIONE HOME */
 #Formazione {
     background-color: var(--main-color);
     color: var(--light-text) !important;
@@ -169,12 +185,11 @@ p {
     max-height:100%;
 }
 
-/* RECENSIONI */
+/* RECENSIONI HOME */
 .fa-star {
     font-size: 2rem !important;
     color: var(--secondary-color) !important;
 }
-
 
 
 
