@@ -34,10 +34,10 @@ while($row = fetch_array($query)) {
 
     <!-- HEADER -->
     <div id="Header" class="content-padding">
-        <div class="row align-items-center">
+        <div class="row align-items-center pb-3">
             <div class="col-lg-6">
                 <p class="header-subtitle">Elisa Fortunati</p>
-                <p>Insegnante di</p>
+                <p class="header-small">Insegnante di</p>
                 <h1>Voceterapia</h1>
             </div>
             <div class="col-lg-6">

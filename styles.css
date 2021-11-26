@@ -167,7 +167,11 @@ footer a {
 }
 
 #Header img {
-    max-width: 500px;
+    max-width: 450px;
+}
+
+#Header .header-small {
+    font-size: 1.2rem;
 }
 
 /* FORMAZIONE HOME */
