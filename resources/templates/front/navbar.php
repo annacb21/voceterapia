@@ -1,11 +1,11 @@
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <div class="container-fluid">
+<nav class="navbar navbar-expand-lg navbar-dark content-padding">
+    <div class="container-fluid px-0">
         <a class="navbar-brand" href="index.php">Voceterapia</a>
         <a class="visually-hidden-focusable" href="#Header">Vai al contenuto principale</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarLinks" aria-controls="navbarLinks" aria-expanded="false" aria-label="Riduci navigazione">
             <span class="navbar-toggler-icon"></span>
         </button>
-        <div class="collapse navbar-collapse" id="navbarLinks">
+        <div class="collapse navbar-collapse justify-content-end" id="navbarLinks">
             <ul class="navbar-nav">
                 <li class="nav-item">
                     <a class="nav-link <?php if(basename($_SERVER['PHP_SELF']) == "index.php"){echo "active";} else {echo "";} ?>" href="index.php">Home</a>

@@ -13,10 +13,21 @@
     font-family: 'Montserrat', sans-serif;
 }
 
+.content-padding {
+    padding: 1.5% 5% !important;
+}
+
 h1, h2, h3, .navbar-brand {
     font-family: 'EB Garamond', serif;
     text-transform: uppercase;
+}
+
+h1, h2 {
     color: var(--main-color) !important;
+}
+
+h3 {
+    color: var(--light-text) !important;
 }
 
 .more-btn {
@@ -55,10 +66,16 @@ h1, h2, h3, .navbar-brand {
     color: var(--main-color) !important;
 }
 
+/* NAVBAR */
+.navbar {
+    background-color: var(--main-color) !important;
+    color: var(--light-text) !important;
+}
 
-/* CANTO */
-
-
+.navbar-dark .navbar-nav .nav-link.active, .navbar-dark .navbar-nav .show>.nav-link {
+    color: var(--secondary-color) !important;
+    font-weight: 500;
+}
 
 
 
