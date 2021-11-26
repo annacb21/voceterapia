@@ -56,14 +56,24 @@
         Durante il percorso di studi ti aiuterò a comprendere che si canta nel corpo e con il corpo, poiché la voce, che lo abita, ne è parte integrante. Soprattutto perché il canto dispiega un’area intermedia di risonanza interiore e di nuova consapevolezza di sè, come congiunzione mente-corpo, dove il trait d’union è dato dall’ azionamento dei muscoli preposti alla fonazione, che permettono l’amplificazione della nostra voce.
         </p>
     </div>
-    <figure>
-        <blockquote class="blockquote">
-            <p>Noi siamo “diapason-soggetti”</p>
-        </blockquote>
-        <figcaption class="blockquote-footer">
-            <cite title="Source Title">Jean Luc Nancy, filosofo</cite>
-        </figcaption>
-    </figure>
+    <div id="canto-quote">
+        <figure>
+            <div class="d-flex position-absolute w-100 justify-content-between quote-container">
+                <div class="left-quote">
+                    <img src="images/left-quotes-sign.svg" alt="left quote image">
+                </div>
+                <div class="right-quote">
+                    <img src="images/right-quotes-sign.svg" alt="right quote image">
+                </div>
+            </div>
+            <blockquote class="blockquote">
+                <p>Noi siamo “diapason-soggetti”</p>
+            </blockquote>
+            <figcaption class="blockquote-footer">
+                <cite title="Source Title">Jean Luc Nancy, filosofo</cite>
+            </figcaption>
+        </figure>
+    </div>
     <p>La sensazione che si prova in tali frangenti è sentirsi pervadere dalla vibrazione del nostro corpo e della nostra stessa voce!!! Le lezioni di canto ti porteranno a scoprire come si possa 
     favorire o ostacolare il libero fluire della voce e come sviluppare nel tempo una piena consapevolezza della morbida elasticità del corpo.
     Durante lo studio ti guiderò nel prendere coscienza di come la tua voce possa cambiare e migliorare, modificando solo la respirazione o altre volte allenando muscoli di cui nemmeno 

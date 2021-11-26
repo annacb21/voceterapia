@@ -32,21 +32,12 @@ h1, h2, h3, .navbar-brand {
     padding-left: 1rem;
 }
 
-.left-quote, .right-quote {
-    position: absolute;
+.quote-container {
+    padding: 0 8rem;
 }
 
-.left-quote {
-    bottom: 8rem;
-}
-
-.left-quote img, .right-quote img {
+.quote-container .left-quote img, .right-quote img {
     width: 100px;
-}
-
-.right-quote {
-    right: 0;
-    bottom: 4rem;
 }
 
 .blockquote p{
@@ -63,6 +54,9 @@ h1, h2, h3, .navbar-brand {
     padding-right: 4rem;
     color: var(--main-color) !important;
 }
+
+
+/* CANTO */
 
 
 
