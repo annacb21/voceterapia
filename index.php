@@ -87,7 +87,7 @@ while($row = fetch_array($query)) {
                 </div>
                 <div class="col-lg-9">
                     <div class="row full-height ps-4">
-                        <div class="text-justify">
+                        <div>
                             <p>Dopo il conseguimento del Diploma di Canto con 10 e lode, ho conseguito la laurea in Filosofia con 110 e lode.
                             Ho pubblicato un articolo relativo alla tesi di laurea “Sul Compendium musicae” di Cartesio nella Rivista Musicologica “Quaderni di musicologia” ed ho vinto il concorso come Coordinatore dei Servizi Musicali della Fondazione Arena.
                             Ho Iniziato la carriera della solista 20 anni fa affiancando l’attività artistica a quella didattica.
@@ -142,7 +142,7 @@ $review = <<<DELIMETER
                 </div>
             </div>
             <p class="card-title pb-2">{$r->get_titolo()}</p>
-            <p class="card-text text-justify">{$r->get_testo()}</p>
+            <p class="card-text">{$r->get_testo()}</p>
             <p class='text-muted'>{$r->get_data()}</p>
 DELIMETER;
 $review .= $stars;

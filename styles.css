@@ -195,6 +195,12 @@ footer a {
     color: var(--secondary-color) !important;
 }
 
+/* FORMAZIONE */
+#Formazione1 img {
+    max-width:100%;
+    max-height:100%;
+}
+
 
 
 
