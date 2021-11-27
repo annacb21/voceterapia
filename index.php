@@ -151,7 +151,7 @@ echo $review;
 }
 ?>
             </div>
-            <a href="recensioni.php" role="button" class="btn more-btn float-end" aria-label="Tutte le recensioni">Tutte le recensioni <span><i class="fas fa-arrow-right"></i></span></a>
+            <a href="recensioni.php#AllReviews" role="button" class="btn more-btn float-end" aria-label="Tutte le recensioni">Tutte le recensioni <span><i class="fas fa-arrow-right"></i></span></a>
         </div>
     </div>
 
