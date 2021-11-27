@@ -138,8 +138,8 @@ $plink = "?page=" . $prev;
 }
 
 $pag = <<<DELIMETER
-<nav aria-label="Navigazione pagine">
-    <ul class="pagination">
+<nav aria-label="Navigazione pagine" class="py-4">
+    <ul class="pagination justify-content-center">
         <li class="page-item{$dis}">
             <a class="page-link" href="{$plink}" aria-label="Indietro">
                 <span aria-hidden="true">&laquo;</span>

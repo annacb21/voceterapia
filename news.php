@@ -8,10 +8,9 @@ confirm($query);
 $latest_news = array();
 $i = 0;
 while($row = fetch_array($query)) {
-    $d = $row['data_news'];
-    setlocale(LC_TIME, 'it_IT');
-    $pdate = strftime("%d %B %Y", strtotime($d));
-    $latest_news[$i] = new Post($row['id'], $row['titolo'], $row['testo'], $d);
+    $d = date_create($row['data_news']);
+    $pdate = date_format($d, 'd/m/y');
+    $latest_news[$i] = new Post($row['id'], $row['titolo'], $row['testo'], $pdate);
     $i++;
 }
 ?>
@@ -36,15 +35,18 @@ while($row = fetch_array($query)) {
     <?php include(TEMPLATE_FRONT . DS . "navbar.php"); ?>
 
     <!-- MAIN CONTENT -->
-    <h1>News</h1>
-    <div class="col-lg-7">
-        <ul id="news">
+    <div class="content-padding background-light">
+        <h1 class="py-4">News</h1>
+        <div class="row">
+            <div class="col-lg-9">
+                <?php if(empty($page_news)) {echo "<p>Non è presente alcuna news</p>";} ?>
+                <ul id="news" class="px-0">
 <?php 
 foreach($page_news as $n) {
 $post = <<<DELIMETER
-<li>
-    <p>{$n->get_titolo()}</p>
-    <p>{$n->get_data()}</p>
+<li class="py-4 bottom-border">
+    <p class="news-title">{$n->get_titolo()}</p>
+    <p class="text-muted">{$n->get_data()}</p>
     <p>{$n->get_text_ant()}</p>
     <a href="newsDetail.php?id={$n->get_id()}">Leggi di più ...</a>
 </li>
@@ -52,38 +54,39 @@ DELIMETER;
 echo $post;
 }
 ?>
-        </ul>
-        <!-- pagination -->
-        <?php show_pagination($page); ?>
-    </div>
+                </ul>
+                <!-- pagination -->
+                <?php show_pagination($page); ?>
+            </div>
 
-    <!-- FILTERS -->
-    <div class="col-lg-5">
-        <div>
-            <h2>ULTIME NEWS</h2>
-            <ul>
+            <!-- FILTERS -->
+            <div class="col-lg-3">
+                <div class="pb-2">
+                    <h2 class="h3 bottom-border-dark">ULTIME NEWS</h2>
+                    <ul class="px-0 pt-2">
 <?php 
 foreach($latest_news as $n) {
 $lpost = <<<DELIMETER
-<li>
+<li class="pt-3 latest-news">
     <a href="newsDetail.php?id={$n->get_id()}">{$n->get_titolo()}</a>
 </li>
 DELIMETER;
 echo $lpost;
 }
 ?>
-            </ul>
+                    </ul>
+                </div>
+                <div class="pt-5">
+                    <h2 class="h3 bottom-border-dark">CERCA</h2>
+                    <form action="" method="POST" class="needs-validation d-flex pt-3" novalidate>
+                        <input class="form-control me-2" type="text" placeholder="Cerca..." aria-label="Cerca" name="cerca">
+                        <button class="btn btn-outline-primary" type="submit" name="search">Cerca</button>
+                    </form>
+                </div> 
+            </div>
         </div>
-        <div>
-            <h2>CERCA</h2>
-            <form action="" method="POST" class="needs-validation d-flex" novalidate>
-                <input class="form-control me-2" type="text" placeholder="Cerca..." aria-label="Cerca" name="cerca">
-                <button class="btn btn-outline-primary" type="submit" name="search">Cerca</button>
-            </form>
-        </div> 
     </div>
-
-    
+  
     <!-- UP BUTTON -->
     <button type="button" class="btn rounded-circle shadow btn-lg" id="upBtn" onclick="backToTop()"><i class="fas fa-chevron-up"></i></button>
 

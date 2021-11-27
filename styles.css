@@ -135,6 +135,10 @@ p {
     border-bottom: 2.5px solid var(--secondary-color);
 }
 
+.bottom-border-dark {
+    border-bottom: 2px solid var(--main-color);
+}
+
 /* NAVBAR */
 .navbar {
     background-color: var(--main-color) !important;
@@ -293,3 +297,31 @@ footer a {
     color: var(--secondary-color) !important;
 }
 
+/* NEWS */
+.news-title {
+    text-transform: uppercase;
+    font-weight: 600;
+    color: var(--main-color);
+    margin-bottom: 0 !important;
+    font-size: 1.1rem;
+}
+
+.page-item.active .page-link {
+    background-color: var(--main-color) !important;
+    border-color: var(--main-color) !important;
+    color: var(--light-text) !important;
+}
+
+.page-link {
+    color: var(--main-color) !important;
+}
+
+.latest-news a {
+    text-decoration: none;
+    font-style: italic;
+}
+
+.btn-outline-primary {
+    border-color: var(--main-color) !important;
+    color: var(--main-color) !important;
+}
