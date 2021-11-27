@@ -303,7 +303,6 @@ footer a {
     font-weight: 600;
     color: var(--main-color);
     margin-bottom: 0 !important;
-    font-size: 1.1rem;
 }
 
 .page-item.active .page-link {
@@ -324,4 +323,8 @@ footer a {
 .btn-outline-primary {
     border-color: var(--main-color) !important;
     color: var(--main-color) !important;
+}
+
+.min-height {
+    min-height: 400px;
 }

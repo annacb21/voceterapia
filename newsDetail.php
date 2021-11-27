@@ -30,19 +30,21 @@ if(isset($_GET['id'])) {
     <!-- NAVBAR -->
     <?php include(TEMPLATE_FRONT . DS . "navbar.php"); ?>
 
-    <!-- BREADCRUMB -->
-    <nav aria-label="breadcrumb">
-        <ol class="breadcrumb">
-            <li class="breadcrumb-item"><a href="news.php">News</a></li>
-            <li class="breadcrumb-item active" aria-current="page"><?php echo $post->get_titolo(); ?></li>
-        </ol>
-    </nav>
+    <div class="content-padding background-light">
+        <!-- BREADCRUMB -->
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="news.php">News</a></li>
+                <li class="breadcrumb-item active" aria-current="page"><?php echo $post->get_titolo(); ?></li>
+            </ol>
+        </nav>
 
-    <!-- MAIN CONTENT -->
-    <div>
-        <h1><?php echo $post->get_titolo(); ?></h1>
-        <p><?php echo $post->get_data(); ?></p>
-        <p><?php echo $post->get_testo(); ?></p>
+        <!-- MAIN CONTENT -->
+        <div class="min-height pt-4">
+            <h1 class="news-title"><?php echo $post->get_titolo(); ?></h1>
+            <p class="text-muted"><?php echo $post->get_data(); ?></p>
+            <p><?php echo $post->get_testo(); ?></p>
+        </div>
     </div>
     
     <!-- UP BUTTON -->
