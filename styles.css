@@ -340,7 +340,7 @@ footer a {
     text-decoration: none;
 }
 
-.fa-at, .fa-facebook, .fa-instagram {
+#Contatti .fa-facebook, #Contatti .fa-instagram {
     font-size: 1.5rem;
     color: var(--main-color);
 }
