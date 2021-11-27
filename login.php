@@ -20,22 +20,24 @@
     <?php include(TEMPLATE_FRONT . DS . "navbar.php"); ?>
 
     <!-- LOGIN -->
-    <div>
-        <h1>Login Amministratore</h1>
+    <div class="content-padding background-light min-height">
+        <h1 class="text-center py-4">Login Amministratore</h1>
         <?php display_message(); ?>
-        <form action="" method="POST" class="needs-validation" novalidate>
+        <form action="" method="POST" class="needs-validation w-50 m-auto" novalidate>
             <?php login(); ?>
             <div class="mb-3">
-                <label for="username" class="form-label">Username</label>
+                <label for="username" class="form-label text-start">Username</label>
                 <input type="text" name="username" class="form-control" placeholder="Username" required>
                 <div class="invalid-feedback">Inserire il proprio username da amministratore</div> 
             </div>
             <div class="mb-3">
-                <label for="psw" class="form-label">Password</label>
+                <label for="psw" class="form-label text-start">Password</label>
                 <input type="password" name="psw" class="form-control" id="psw" placeholder="Password" required>
                 <div class="invalid-feedback">Inserire la propria password da amministratore</div>
             </div>
-            <button type="submit" name="login" class="btn btn-primary">Accedi</button>
+            <div class="text-center pt-4">
+                <button type="submit" name="login" class="btn form-btn w-25">Accedi</button>
+            </div>
         </form>
     </div>
 
