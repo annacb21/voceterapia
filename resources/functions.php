@@ -197,7 +197,7 @@ function send_email() {
         $toEmail = "voceterapiaverona@gmail.com"; 
 
         $mail = new PHPMailer();
-        $mail->setFrom('postmaster@andreacostacurta.it', "Admin");
+        $mail->setFrom('elisafortunati@voceterapia.it', "Admin");
         $mail->addReplyTo($email, $nome . " " . $cognome);
         $mail->addAddress($toEmail, 'Admin'); 
         $mail->Subject = 'Messaggio da ' . $nome . " " . $cognome;
