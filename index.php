@@ -123,7 +123,7 @@ DELIMETER;
 }
 for($i=0; $i<5-($r->get_punteggio()); $i++) {
 $stars .= <<<DELIMETER
-<div class="col-lg-1">
+<div class="d-inline">
     <i class="far fa-star"></i>
 </div>
 DELIMETER;
