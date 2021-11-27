@@ -48,7 +48,7 @@
                         </div>
                     </div>
                     <div class="align-self-end">
-                        <a href="contatti#EmailForm" role="button" class="btn more-btn" aria-label="prenota">Prenota una lezione <span><i class="fas fa-graduation-cap"></i></span></a>
+                        <a href="contatti.php#contact-form" role="button" class="btn more-btn" aria-label="prenota">Prenota una lezione <span><i class="fas fa-graduation-cap"></i></span></a>
                     </div>
                 </div>
             </div>
