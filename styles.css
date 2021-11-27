@@ -328,3 +328,19 @@ footer a {
 .min-height {
     min-height: 400px;
 }
+
+/* CONTATTI */
+.contact-icon {
+    max-width:100%;
+    max-height:100%;
+}
+
+#Contatti a {
+    color: #000 !important;
+    text-decoration: none;
+}
+
+.fa-at, .fa-facebook, .fa-instagram {
+    font-size: 1.5rem;
+    color: var(--main-color);
+}

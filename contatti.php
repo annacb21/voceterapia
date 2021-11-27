@@ -20,26 +20,62 @@
     <?php include(TEMPLATE_FRONT . DS . "navbar.php"); ?>
 
     <!-- CONTATTI -->
-    <div>
-        <h1>Contatti</h1>
-        <div class="row">
+    <div id="Contatti" class="content-padding background-light">
+        <h1 class="py-4 text-center">Contatti</h1>
+        <div class="row justify-content-center pt-3 pb-5 bottom-border">
             <div class="col-lg-4">
-                <h2>social</h2>
-                <a href="#"><i class="fab fa-facebook"></i> <span>Elisa Fortunati</span></a>
-                <a href="#"><i class="fab fa-instagram"></i> <span>@elisafortunati</span></a>
+                <div class="row">
+                    <div class="col-lg-3">
+                        <img src="images/social-icon.png" class="contact-icon" alt="social contact icon">
+                    </div>
+                    <div class="col-lg-9">
+                        <h2 class="pb-3 h3">social</h2>
+                        <div class="row align-items-center pb-3">
+                            <div class="col-lg-1">
+                                <i class="fab fa-facebook"></i>
+                            </div>
+                            <div class="col-lg-9">
+                                <a href="#" class="card-text">Elisa Fortunati</a>
+                            </div>
+                        </div>
+                        <div class="row align-items-center pb-3">
+                            <div class="col-lg-1">
+                                <i class="fab fa-instagram"></i>
+                            </div>
+                            <div class="col-lg-9">
+                                <a href="#" class="card-text">@elisafortunati</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
             <div class="col-lg-4">
-                <h2>Località</h2>
-                <p>Verona (VR), zona centro storico</p>
+                <div class="row">
+                    <div class="col-lg-3">
+                        <img src="images/where-icon.png" class="contact-icon" alt="location contact icon">
+                    </div>
+                    <div class="col-lg-9">
+                        <h2 class="pb-3 h3">Località</h2>
+                        <p>Verona (VR), zona centro storico</p>
+                    </div>
+                </div>
             </div>
             <div class="col-lg-4">
-                <h2>Email</h2>
-                <p>elisa.fortunati@virgilio.it</p>
+                <div class="row">
+                    <div class="col-lg-3">
+                        <img src="images/email-icon.png" class="contact-icon" alt="email contact icon">
+                    </div>
+                    <div class="col-lg-9">
+                        <h2 class="pb-3 h3">Email</h2>
+                        <p>elisa.fortunati@virgilio.it</p>
+                    </div>
+                </div>
             </div>
         </div>
-        <div id="contact-form">
-            <h2>Invia una email</h2>
-            <p>I campi contrassegnati con un * sono obbligatori</p>
+
+        <div id="contact-form" class="py-5 w-75 m-auto">
+            <h2 class="text-center">Invia una email</h2>
+            <p class="text-center text-muted pt-2 pb-4">I campi contrassegnati con un * sono obbligatori</p>
             <?php display_message(); ?>
             <form action="" method="POST" class="row g-3 needs-validation" novalidate>
                 <?php send_email(); ?>
@@ -67,12 +103,12 @@
                     <textarea class="form-control" id="messaggio" name="messaggio" rows="5" placeholder="Scrivi qui il tuo messaggio" required></textarea>
                     <div class="invalid-feedback">Inserire un messaggio</div>
                 </div>
-                <div class="col-lg-12 form-check">
+                <div class="col-lg-12 form-check pb-5">
                     <input class="form-check-input" type="checkbox" value="" id="checkPrivacy" name="checkPrivacy" required>
                     <label class="form-check-label" for="checkPrivacy">Dichiaro di aver letto la Privacy Policy e di acconsentire, ai soli fini del servizio richiesto, al trattamento dei miei dati personali.</label>
-                    <div class="invalid-feedback">Devi accettare le condizioni di privacy per poter procedere con il pagamento</div>
+                    <div class="invalid-feedback">Devi accettare le condizioni di privacy per poter procedere</div>
                 </div>
-                <button type="submit" name="sendEmail" class="btn btn-primary">Invia</button>
+                <button type="submit" name="sendEmail" class="btn form-btn w-25 m-auto">Invia</button>
             </form>
         </div>
     </div>
