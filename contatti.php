@@ -23,49 +23,49 @@
     <div id="Contatti" class="content-padding background-light">
         <h1 class="py-4 text-center">Contatti</h1>
         <div class="row justify-content-center pt-3 pb-5 bottom-border">
-            <div class="col-lg-4">
+            <div class="col-lg-4 col-md-4 contact-col">
                 <div class="row">
-                    <div class="col-lg-3">
+                    <div class="col-lg-3 col-md-2">
                         <img src="images/social-icon.png" class="contact-icon" alt="social contact icon">
                     </div>
-                    <div class="col-lg-9">
+                    <div class="col-lg-9 col-md-10">
                         <h2 class="pb-3 h3">social</h2>
                         <div class="row align-items-center pb-3">
-                            <div class="col-lg-1">
+                            <div class="col-xl-1 col-lg-2 col-md-2">
                                 <i class="fab fa-facebook"></i>
                             </div>
-                            <div class="col-lg-9">
-                                <a href="#" class="card-text">Elisa Fortunati</a>
+                            <div class="col-xl-11 col-lg-10 col-md-9">
+                                <p class="card-text">Elisa Fortunati</p>
                             </div>
                         </div>
                         <div class="row align-items-center pb-3">
-                            <div class="col-lg-1">
+                            <div class="col-xl-1 col-lg-2 col-md-2">
                                 <i class="fab fa-instagram"></i>
                             </div>
-                            <div class="col-lg-9">
-                                <a href="#" class="card-text">@elisafortunati</a>
+                            <div class="col-xl-11 col-lg-10 col-md-10">
+                                <p class="card-text">fortunati.elisa</p>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="col-lg-4">
+            <div class="col-lg-4 col-md-4 contact-col">
                 <div class="row">
-                    <div class="col-lg-3">
+                    <div class="col-lg-3 col-md-2">
                         <img src="images/where-icon.png" class="contact-icon" alt="location contact icon">
                     </div>
-                    <div class="col-lg-9">
+                    <div class="col-lg-9 col-md-10">
                         <h2 class="pb-3 h3">Località</h2>
                         <p>Verona (VR), zona centro storico</p>
                     </div>
                 </div>
             </div>
-            <div class="col-lg-4">
+            <div class="col-lg-4 col-md-4 contact-col">
                 <div class="row">
-                    <div class="col-lg-3">
+                    <div class="col-lg-3 col-md-2">
                         <img src="images/email-icon.png" class="contact-icon" alt="email contact icon">
                     </div>
-                    <div class="col-lg-9">
+                    <div class="col-lg-9 col-md-10">
                         <h2 class="pb-3 h3">Email</h2>
                         <p>elisa.fortunati@virgilio.it</p>
                     </div>
@@ -105,7 +105,7 @@
                 </div>
                 <div class="col-lg-12 form-check pb-5">
                     <input class="form-check-input" type="checkbox" value="" id="checkPrivacy" name="checkPrivacy" required>
-                    <label class="form-check-label" for="checkPrivacy">Dichiaro di aver letto la Privacy Policy e di acconsentire, ai soli fini del servizio richiesto, al trattamento dei miei dati personali.</label>
+                    <label class="form-check-label" for="checkPrivacy">Dichiaro di aver letto la <a href="https://www.iubenda.com/privacy-policy/73127717" class="iubenda-white iubenda-noiframe iubenda-embed iubenda-noiframe " title="Privacy Policy ">Privacy Policy</a><script type="text/javascript">(function (w,d) {var loader = function () {var s = d.createElement("script"), tag = d.getElementsByTagName("script")[0]; s.src="https://cdn.iubenda.com/iubenda.js"; tag.parentNode.insertBefore(s,tag);}; if(w.addEventListener){w.addEventListener("load", loader, false);}else if(w.attachEvent){w.attachEvent("onload", loader);}else{w.onload = loader;}})(window, document);</script> e di acconsentire, ai soli fini del servizio richiesto, al trattamento dei miei dati personali.</label>
                     <div class="invalid-feedback">Devi accettare le condizioni di privacy per poter procedere</div>
                 </div>
                 <button type="submit" name="sendEmail" class="btn form-btn w-25 m-auto">Invia</button>

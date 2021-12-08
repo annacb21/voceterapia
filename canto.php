@@ -23,21 +23,21 @@
     <div id="Canto" class="content-padding background-light">
         <h1 class="text-center py-4">Lezioni di canto lirico e pop</h1>
         <div class="row">
-            <div class="col-lg-6">
+            <div class="col-xxl-6 col-xl-7 col-lg-7">
                 <div class="row">
                     <div class="card p-4">
                         <div class="card-body">
                             <div class="row">
-                                <div class="col-lg-4">
+                                <div class="col-lg-4 col-md-5">
                                     <p class="card-title">Modalità:</p>
                                 </div>
-                                <div class="col-lg-8">
+                                <div class="col-lg-8 col-md-7">
                                     <p class="card-text">In presenza oppure online</p>
                                 </div>
-                                <div class="col-lg-4">
+                                <div class="col-lg-4 col-md-5" id="IndicataPer">
                                     <p class="card-title">Indicata per:</p>
                                 </div>
-                                <div class="col-lg-8">
+                                <div class="col-lg-8 col-md-7">
                                     <p class="card-text">cantanti professionisti e amatoriali</p>
                                 </div>
                             </div>
@@ -52,7 +52,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-lg-6 ps-5">
+            <div class="col-xxl-6 col-xl-5 col-lg-5 ps-5" id="RightCard">
                 <div>
                     <img src="images/canto.jpg" alt="foto spartito">
                 </div>

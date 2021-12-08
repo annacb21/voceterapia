@@ -23,21 +23,21 @@
     <div id="Voceterapia" class="content-padding background-light">
         <h1 class="py-4 text-center">Sessioni di voceterapia</h1>
         <div class="row py-3">
-            <div class="col-lg-8">
+            <div class="col-xxl-8 col-xl-7 col-lg-6 left-card">
                 <div class="row full-height">
                     <div class="card p-4">
                         <div class="card-body">
                             <div class="row">
-                                <div class="col-lg-2">
+                                <div class="col-lg-3 col-md-2">
                                     <p class="card-title">Modalità:</p>
                                 </div>
-                                <div class="col-lg-10">
+                                <div class="col-lg-9 col-md-10">
                                     <p class="card-text">In presenza oppure online</p>
                                 </div>
-                                <div class="col-lg-2 pt-4">
+                                <div class="col-lg-3 col-md-2 pt-4">
                                     <p class="card-title">Indicata per:</p>
                                 </div>
-                                <div class="col-lg-10 pt-4">
+                                <div class="col-lg-9 col-md-10 pt-4">
                                     <ul class="ps-0">
                                         <li class="pb-3">attori, cantanti, insegnanti, avvocati, commessi, addetti alla reception, alle vendite e tutti coloro che facciano un uso professionale della voce</li>
                                         <li class="pb-3">adulti e bambini con afonia, disfonia, disturbi del linguaggio, difficoltà di pronuncia, di comunicazione, di espressione, di utilizzo della voce in generale, disagio psichico (in affiancamento anche ad altri professionisti quali psicologi, educatori o logopedisti)</li>
@@ -47,12 +47,12 @@
                             </div>
                         </div>
                     </div>
-                    <div class="align-self-end">
+                    <div class="align-self-end pt-4">
                         <a href="contatti.php#contact-form" role="button" class="btn more-btn" aria-label="prenota">Prenota una lezione <span><i class="fas fa-graduation-cap"></i></span></a>
                     </div>
                 </div>
             </div>
-            <div class="col-lg-4 ps-5">
+            <div class="col-xxl-4 col-xl-5 col-lg-6 ps-5">
                 <img src="images/voceterapia.jpeg" alt="foto bambino che canta">
             </div>
         </div>

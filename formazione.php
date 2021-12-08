@@ -23,7 +23,7 @@
     <div id="Formazione1" class="content-padding background-light">
         <h1 class="pt-4 pb-2">Formazione</h1>
         <div class="row align-items-center pb-4">
-            <div class="col-lg-7">
+            <div class="col-lg-7 col-md-12">
                 <p>Dopo il conseguimento del Diploma di Canto con 10 e lode, ho conseguito la laurea in Filosofia con 110 e lode.
                 Ho pubblicato un articolo relativo alla tesi di laurea “Sul Compendium musicae” di Cartesio nella Rivista Musicologica “Quaderni di musicologia” ed ho vinto il concorso come Coordinatore dei Servizi Musicali della Fondazione Arena.
                 Ho Iniziato la carriera della solista 20 anni fa affiancando l’attività artistica a quella didattica.
@@ -33,15 +33,15 @@
                 Ho tenuto corsi di impostazione vocale e canto (lirico e leggero) in scuole private, per studenti del Conservatorio e corsi di musica nella scuola pubblica sia come esperta esterna che come docente interna. 
                 </p>
             </div>
-            <div class="col-lg-5 ps-5">
+            <div class="col-lg-5 ps-5" id="Elisa3">
                 <img src="images/elisa3.png" alt="foto elisa fortunati">
             </div>
         </div>
         <div class="row pb-4">
-            <div class="col-lg-4 pe-5">
+            <div class="col-lg-4 col-md-4 pe-5">
                 <img src="images/elisa4.png" alt="foto elisa fortunati">
             </div>
-            <div class="col-lg-8">
+            <div class="col-lg-8 col-md-8">
                 <div class="row full-height">
                     <div>
                         <h2 class="pp-1">Curriculum artistico</h2>
@@ -54,7 +54,7 @@
                         </p>
                     </div>
                     <div class="align-self-end">
-                        <a href="http://www.elisafortunati.it/home.html" role="button" class="btn more-btn" aria-label="sito personale">Sito personale <span><i class="fas fa-arrow-right"></i></span></a>
+                        <a href="http://www.elisafortunati.it/home.html" role="button" class="btn more-btn" aria-label="sito personale" target="_blank">Sito personale <span><i class="fas fa-arrow-right"></i></span></a>
                     </div>
                 </div>
             </div>

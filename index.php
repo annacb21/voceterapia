@@ -34,6 +34,9 @@ while($row = fetch_array($query)) {
 
     <!-- HEADER -->
     <div id="Header" class="content-padding">
+        <svg class="four" viewBox="0 0 500 500" preserveAspectRatio="none">   
+            <path d="M0,100 C150,200 350,0 300,100 Q400,25 500,25 L500,0 L0,0 Z" style="stroke: none; fill:#1e90ff;"></path>
+        </svg>
         <div class="row align-items-center pb-3">
             <div class="col-lg-6">
                 <p class="header-subtitle">Elisa Fortunati</p>
@@ -47,7 +50,7 @@ while($row = fetch_array($query)) {
     </div>
 
     <!-- VOCETERAPIA -->
-    <div class="py-5 background-light">
+    <div class="py-5 background-light position-relative">
         <div class="content-padding text-center">
             <h2 class="pb-4">Cos'è la voceterapia?</h2>
             <p class="pb-4">La voce è lo strumento più naturale che esista. </br>
@@ -82,10 +85,10 @@ while($row = fetch_array($query)) {
         <div class="content-padding">
             <h2 class="py-4">Su di me ...</h2>
             <div class="row pb-4">
-                <div class="col-lg-3">
+                <div class="col-xxl-3 col-xl-4 col-lg-4 col-md-5">
                     <img src="images/elisa2.png" alt="foto elisa fortunati">
                 </div>
-                <div class="col-lg-9">
+                <div class="col-xxl-9 col-xl-8 col-lg-8 col-md-7">
                     <div class="row full-height ps-4">
                         <div>
                             <p>Dopo il conseguimento del Diploma di Canto con 10 e lode, ho conseguito la laurea in Filosofia con 110 e lode.
@@ -110,7 +113,7 @@ while($row = fetch_array($query)) {
     <div id="Recensioni" class="background-light pb-5">
         <div class="content-padding">
             <h2 class="py-4 text-center">Dicono di me ...</h2>
-            <div class="row py-4">
+            <div class="row py-4" id="CardDeck">
 <?php
 foreach($recensioni as $r) {
 $stars = "<div class='text-center'>";
@@ -130,14 +133,14 @@ DELIMETER;
 }
 $stars .= "</div>";
 $review = <<<DELIMETER
-<div class="col-lg-4">
-    <div class="card mx-2">
+<div class="col-xxl-4 col-xl-6 col-lg-6">
+    <div class="card mx-2 my-3">
         <div class="card-body">
             <div class="row pb-3 align-items-center">
-                <div class="col-lg-2">
+                <div class="col-lg-2 col-md-1">
                     <img src="images/{$r->get_foto_autore()}" alt="foto autore recensione">
                 </div>
-                <div class="col-lg-10">
+                <div class="col-lg-10 col-md-11">
                     <p class="card-subtitle text-muted">{$r->get_autore()}</p>
                 </div>
             </div>

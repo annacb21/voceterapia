@@ -35,7 +35,7 @@ while($row = fetch_array($query)) {
 
     <!-- MAIN CONTENT -->
     <div class="background-light pt-4">
-        <div class="w-75 m-auto py-4 bottom-border">
+        <div class="w-75 m-auto py-4 bottom-border" id="ReviewForm">
             <h1 class="text-center">Scrivi una recensione</h1>
             <p class="text-center text-muted">I campi contrassegnati con * sono obbligatori</p>
             <?php display_message(); ?>
@@ -86,7 +86,7 @@ while($row = fetch_array($query)) {
                 </div>
                 <div class="col-lg-12 form-check pt-3 pb-5">
                     <input class="form-check-input" type="checkbox" value="" id="checkPrivacy" name="checkPrivacy" required>
-                    <label class="form-check-label" for="checkPrivacy">Dichiaro di aver letto la Privacy Policy e di acconsentire, ai soli fini del servizio richiesto, al trattamento dei miei dati personali.</label>
+                    <label class="form-check-label" for="checkPrivacy">Dichiaro di aver letto la <a href="https://www.iubenda.com/privacy-policy/73127717" class="iubenda-black iubenda-noiframe iubenda-embed iubenda-noiframe " title="Privacy Policy ">Privacy Policy</a><script type="text/javascript">(function (w,d) {var loader = function () {var s = d.createElement("script"), tag = d.getElementsByTagName("script")[0]; s.src="https://cdn.iubenda.com/iubenda.js"; tag.parentNode.insertBefore(s,tag);}; if(w.addEventListener){w.addEventListener("load", loader, false);}else if(w.attachEvent){w.attachEvent("onload", loader);}else{w.onload = loader;}})(window, document);</script> e di acconsentire, ai soli fini del servizio richiesto, al trattamento dei miei dati personali.</label>
                     <div class="invalid-feedback">Devi accettare le condizioni di privacy per poter pubblicare la recensione</div>
                 </div>
                 <button type="submit" name="addReview" class="btn form-btn w-25 m-auto">Pubblica</button>
@@ -120,10 +120,10 @@ $review = <<<DELIMETER
     <div class="card mx-2">
         <div class="card-body">
             <div class="row pb-3 align-items-center">
-                <div class="col-lg-2">
+                <div class="col-lg-2 col-md-1">
                     <img src="images/{$r->get_foto_autore()}" alt="foto autore recensione">
                 </div>
-                <div class="col-lg-4">
+                <div class="col-lg-10 col-md-11">
                     <p class="card-subtitle text-muted">{$r->get_autore()}</p>
                 </div>
             </div>
@@ -172,10 +172,10 @@ for($i=0; $i<count($recensioni); $i++) {
             animationDuration: 1000,
             gap: 10,
             breakpoints: {
-                992: {
+                1200: {
                 perView: 2
                 },
-                500: {
+                992: {
                 perView: 1
                 }
             }
