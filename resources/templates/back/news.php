@@ -71,7 +71,7 @@ while($row = fetch_array($query)) {
                     <?php endforeach; ?>
                 </tbody>
             </table>
-            <div class="row" id="post-card-mobile">
+            <div class="row" id="news-card-mobile">
                 <?php foreach($news as $n): ?>
                     <div class="card shadow rounded mb-2">
                         <div class="card-body">

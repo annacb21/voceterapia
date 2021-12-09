@@ -9,11 +9,10 @@ confirm($review_query);
 $tot_row2 = fetch_array($review_query);
 $tot_rev = $tot_row2['media'];
 
-
-$users_query = query("SELECT COUNT(*) as tot FROM utenti");
-confirm($users_query);
-$tot_row3 = fetch_array($users_query);
-$tot_users = $tot_row3['tot'];
+$rec_query = query("SELECT COUNT(*) as tot FROM recensioni");
+confirm($rec_query);
+$tot_row3 = fetch_array($rec_query);
+$tot_rec = $tot_row3['tot'];
 
 $recent_news_query = query("SELECT * FROM news ORDER BY data_news DESC LIMIT 4");
 confirm($recent_news_query);
@@ -62,11 +61,11 @@ while($row = fetch_array($recent_news_query)) {
         </div>
         <div class="card">
             <div class="card-header">
-                <i class="fas fa-users"></i>
+                <i class="fas fa-pen-nib"></i>
             </div>
             <div class="card-body">
-                <p class="h1"><?php echo $tot_users; ?></p>
-                <p>utenti amministratori</p>
+                <p class="h1"><?php echo $tot_rec; ?></p>
+                <p>recensioni pubblicate</p>
             </div>
         </div>
     </div>

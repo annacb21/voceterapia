@@ -4,16 +4,14 @@ class Recensione {
 
     private $id;
     private $autore;
-    private $foto_autore;
     private $titolo;
     private $testo;
     private $punteggio;
     private $data;
 
-    public function __construct($i, $a, $fa, $t, $te, $p, $d) {
+    public function __construct($i, $a, $t, $te, $p, $d) {
         $this->id = $i;
         $this->autore = $a;
-        $this->foto_autore = $fa;
         $this->titolo = $t;
         $this->testo = $te;
         $this->punteggio = $p;
@@ -26,10 +24,6 @@ class Recensione {
 
     public function get_autore() {
         return $this->autore != null ? $this->autore : "anonimo";
-    }
-
-    public function get_foto_autore() {
-        return $this->foto_autore != null ? $this->foto_autore : "user-circle.svg";
     }
 
     public function get_titolo() {

@@ -233,11 +233,11 @@ td .btn-danger {
 }
 
 /* POST */
-#post-card-mobile {
+#news-card-mobile {
     display: none;
 }
 
-#add-post-form {
+#add-news-form {
     display: none;
 }
 
@@ -391,11 +391,11 @@ td .btn-danger {
         display: none;
     }
 
-    #post-card-mobile {
+    #news-card-mobile {
         display: block;
     }
 
-    #post-table-mobile {
+    #user-table-mobile {
         display: none;
     }
 

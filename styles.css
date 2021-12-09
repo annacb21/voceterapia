@@ -65,6 +65,7 @@ p {
     text-transform: uppercase;
     font-weight: 600 !important;
     transition: 0.2s;
+    width: 25% !important;
 }
 
 .quote-container {
@@ -166,7 +167,7 @@ footer a {
     text-decoration: none;
 }
 
-.fa-at, .fa-facebook, .fa-instagram {
+.fa-at, .fa-phone-alt {
     font-size: 1.5rem;
 }
 
@@ -469,7 +470,7 @@ footer a {
     }
 
     #Header h1 {
-        font-size: 3rem;
+        font-size: 2rem;
     }
 
     .contact-col .col-md-2 {
@@ -486,6 +487,14 @@ footer a {
 
     #Contatti .contact-col .align-items-center .col-xl-11 {
         width: 90% !important;
+    }
+
+}
+
+@media only screen and (max-width: 592px) {
+
+    .form-btn {
+        width: 100% !important;
     }
 
 }

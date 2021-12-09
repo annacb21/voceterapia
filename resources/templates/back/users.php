@@ -54,7 +54,7 @@ confirm($query);
                 <?php while($row = fetch_array($query)) : ?>
                     <div class="card shadow rounded mb-2">
                         <div class="card-body">
-                            <p class="card-title fw-bolder"><?php echo $row['username']; ?></p>
+                            <p class="card-title"><?php echo $row['username']; ?></p>
                             <a class="btn btn-primary" href="../admin/admin.php?edit-user&id=<?php echo $row['id']; ?>" role="button">Modifica password</a>
                         </div>
                     </div>

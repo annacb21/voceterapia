@@ -39,20 +39,12 @@
                 </div>
                 <div class="row align-items-center pb-3">
                     <div class="col-lg-1 col-md-2 footer-contact-icon">
-                        <i class="fab fa-facebook"></i>
+                        <i class="fas fa-phone-alt"></i>
                     </div>
                     <div class="col-lg-11 col-md-10 footer-contact-p">
-                        <p class="card-text">Elisa Fortunati</p>
+                        <p class="card-text">+39 338 8210704</p>
                     </div>
                 </div>
-                <div class="row align-items-center pb-3">
-                    <div class="col-lg-1 col-md-2 footer-contact-icon">
-                        <i class="fab fa-instagram"></i>
-                    </div>
-                    <div class="col-lg-11 col-md-10 footer-contact-p">
-                        <p class="card-text">fortunati.elisa</p>
-                    </div>
-                </div> 
             </div>
             <div class="col-lg-4 col-md-3">
                 <div class="pb-5">
@@ -61,7 +53,7 @@
                 </div>
                 <div>
                     <h3 class="pb-3 h4">Sito personale</h3>
-                    <a href="http://www.elisafortunati.it/home.html">www.elisafortunati.it</a>
+                    <a href="http://www.elisafortunati.it/home.html" target="_blank">www.elisafortunati.it</a>
                 </div>
             </div>
         </div>
@@ -70,8 +62,13 @@
                 <span class="px-2">
                     <a href="https://www.iubenda.com/privacy-policy/73127717" class="iubenda-black iubenda-noiframe iubenda-embed iubenda-noiframe " title="Privacy Policy ">Privacy Policy</a>
                     <script type="text/javascript">(function (w,d) {var loader = function () {var s = d.createElement("script"), tag = d.getElementsByTagName("script")[0]; s.src="https://cdn.iubenda.com/iubenda.js"; tag.parentNode.insertBefore(s,tag);}; if(w.addEventListener){w.addEventListener("load", loader, false);}else if(w.attachEvent){w.attachEvent("onload", loader);}else{w.onload = loader;}})(window, document);</script>
-                </span>©Copiryght 2021</p>
-            <a role="button" class="btn btn-outline-secondary text-muted" href="login.php"><i class="fas fa-key"></i></a>
+                </span>
+            ©Copiryght 2021</p>
+            <?php
+                if(!isset($_SESSION['user'])) {
+                    echo "<a role='button' class='btn btn-outline-secondary text-muted' href='login.php'><i class='fas fa-key'></i></a>";
+                }
+            ?>
         </div>
     </div>
 </footer>

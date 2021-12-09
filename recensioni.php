@@ -7,7 +7,7 @@ $i = 0;
 while($row = fetch_array($query)) {
     $d = date_create($row['data_rec']);
     $pdate = date_format($d, 'd/m/y');
-    $recensioni[$i] = new Recensione($row['id'], $row['autore'], $row['foto_autore'], $row['titolo'], $row['testo'], $row['punteggio'], $pdate);
+    $recensioni[$i] = new Recensione($row['id'], $row['autore'], $row['titolo'], $row['testo'], $row['punteggio'], $pdate);
     $i++;
 }
 ?>
@@ -89,7 +89,7 @@ while($row = fetch_array($query)) {
                     <label class="form-check-label" for="checkPrivacy">Dichiaro di aver letto la <a href="https://www.iubenda.com/privacy-policy/73127717" class="iubenda-black iubenda-noiframe iubenda-embed iubenda-noiframe " title="Privacy Policy ">Privacy Policy</a><script type="text/javascript">(function (w,d) {var loader = function () {var s = d.createElement("script"), tag = d.getElementsByTagName("script")[0]; s.src="https://cdn.iubenda.com/iubenda.js"; tag.parentNode.insertBefore(s,tag);}; if(w.addEventListener){w.addEventListener("load", loader, false);}else if(w.attachEvent){w.attachEvent("onload", loader);}else{w.onload = loader;}})(window, document);</script> e di acconsentire, ai soli fini del servizio richiesto, al trattamento dei miei dati personali.</label>
                     <div class="invalid-feedback">Devi accettare le condizioni di privacy per poter pubblicare la recensione</div>
                 </div>
-                <button type="submit" name="addReview" class="btn form-btn w-25 m-auto">Pubblica</button>
+                <button type="submit" name="addReview" class="btn form-btn m-auto">Pubblica</button>
             </form>
         </div>
         <div id="AllReviews" class="content-padding">
@@ -121,7 +121,7 @@ $review = <<<DELIMETER
         <div class="card-body">
             <div class="row pb-3 align-items-center">
                 <div class="col-lg-2 col-md-1">
-                    <img src="images/{$r->get_foto_autore()}" alt="foto autore recensione">
+                    <img src="images/user-circle.svg" alt="">
                 </div>
                 <div class="col-lg-10 col-md-11">
                     <p class="card-subtitle text-muted">{$r->get_autore()}</p>
@@ -147,8 +147,6 @@ for($i=0; $i<count($recensioni); $i++) {
             </div>
         </div>
     </div>
-
-    <div class="elfsight-app-9c4839bc-ad9b-4346-bec2-f2422c7c3122 py-4"></div>
     
     <!-- UP BUTTON -->
     <button type="button" class="btn rounded-circle shadow btn-lg" id="upBtn" onclick="backToTop()"><i class="fas fa-chevron-up"></i></button>
@@ -162,7 +160,6 @@ for($i=0; $i<count($recensioni); $i++) {
     <script src="js/scrollToTop.js"></script>
     <script src="js/validate.js"></script>
     <script src="node_modules/@glidejs/glide/dist/glide.min.js"></script>
-    <script src="https://apps.elfsight.com/p/platform.js" defer></script>
     <script>
         new Glide('.glide', {
             type: 'slider',

@@ -1,13 +1,13 @@
 <?php 
 require_once("resources/config.php"); 
-$query = query("SELECT * FROM recensioni ORDER BY data_rec DESC LIMIT 3");
+$query = query("SELECT * FROM recensioni WHERE autore = 'Andrea Rizzi' OR autore = 'Marianna Castiglioni' OR autore = 'Ivan' ORDER BY data_rec DESC");
 confirm($query);
 $recensioni = array();
 $i = 0;
 while($row = fetch_array($query)) {
     $d = date_create($row['data_rec']);
     $pdate = date_format($d, 'd/m/y');
-    $recensioni[$i] = new Recensione($row['id'], $row['autore'], $row['foto_autore'], $row['titolo'], $row['testo'], $row['punteggio'], $pdate);
+    $recensioni[$i] = new Recensione($row['id'], $row['autore'], $row['titolo'], $row['testo'], $row['punteggio'], $pdate);
     $i++;
 }
 ?>
@@ -138,7 +138,7 @@ $review = <<<DELIMETER
         <div class="card-body">
             <div class="row pb-3 align-items-center">
                 <div class="col-lg-2 col-md-1">
-                    <img src="images/{$r->get_foto_autore()}" alt="foto autore recensione">
+                    <img src="images/user-circle.svg" alt="">
                 </div>
                 <div class="col-lg-10 col-md-11">
                     <p class="card-subtitle text-muted">{$r->get_autore()}</p>
