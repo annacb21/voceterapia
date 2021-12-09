@@ -50,7 +50,7 @@ function addReview() {
         $codice = escape_string($_POST['code']);
         $punteggio = escape_string($_POST['score']);
         $testo = escape_string($_POST['recensione']);
-        $toEmail = "elisa.fortunati@virgilio.com"; 
+        $toEmail = "elisa.fortunati@virgilio.it"; 
 
         $get_query = query("SELECT * FROM codici WHERE id = '{$codice}' AND usato = 'false' LIMIT 1");
         confirm($get_query);
@@ -65,8 +65,8 @@ function addReview() {
             confirm($query);
 
             $mail = new PHPMailer();
-            $mail->setFrom('elisafortunati@voceterapia.it', "Admin");
-            $mail->addAddress($toEmail, 'Admin'); 
+            $mail->setFrom('elisafortunati@voceterapia.it', "Elisa Fortunati");
+            $mail->addAddress($toEmail, 'Elisa Fortunati'); 
             $mail->Subject = 'Nuova recensione pubblicata';
             $mail->Body = "nuova recensione pubblicata da " . $nome . ", vai subito a leggerla!";
             if($mail->send()) {
@@ -207,12 +207,12 @@ function send_email() {
         $email = escape_string($_POST['email']);
         $phone = escape_string($_POST['telefono']);
         $message = escape_string($_POST['messaggio']);
-        $toEmail = "voceterapiaverona@gmail.com"; 
+        $toEmail = "elisa.fortunati@virgilio.it"; 
 
         $mail = new PHPMailer();
-        $mail->setFrom('elisafortunati@voceterapia.it', "Admin");
+        $mail->setFrom('elisafortunati@voceterapia.it', "Elisa Fortunati");
         $mail->addReplyTo($email, $nome . " " . $cognome);
-        $mail->addAddress($toEmail, 'Admin'); 
+        $mail->addAddress($toEmail, 'Elisa Fortunati'); 
         $mail->Subject = 'Messaggio da ' . $nome . " " . $cognome;
         $mail->Body = "Recapito telefonico: " . $phone . "\n";
         $mail->Body .= $message;
