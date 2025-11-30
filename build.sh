@@ -1,6 +1,7 @@
 #!/bin/bash
 
 rm -rf release
+mkdir -p release
 cp -r public/ release/
 find release -type f -name '*.php' -delete
 
