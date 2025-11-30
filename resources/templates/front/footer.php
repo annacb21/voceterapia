@@ -20,9 +20,6 @@
                         <a class="nav-link" href="recensioni.php">Recensioni</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="news.php">News</a>
-                    </li>
-                    <li class="nav-item">
                         <a class="nav-link" href="contatti.php">Contatti</a>
                     </li>
                 </ul>
@@ -34,7 +31,8 @@
                         <i class="fas fa-at"></i>
                     </div>
                     <div class="col-lg-11 col-md-10 footer-contact-p">
-                        <p class="card-text">elisa.fortunati@virgilio.it</p>
+                        <p class="card-text">elisa.fortunati@gmail.it</p>
+                         <p class="card-text">elisa.fortunati@virgilio.it</p>
                     </div>
                 </div>
                 <div class="row align-items-center pb-3">
@@ -64,11 +62,6 @@
                     <script type="text/javascript">(function (w,d) {var loader = function () {var s = d.createElement("script"), tag = d.getElementsByTagName("script")[0]; s.src="https://cdn.iubenda.com/iubenda.js"; tag.parentNode.insertBefore(s,tag);}; if(w.addEventListener){w.addEventListener("load", loader, false);}else if(w.attachEvent){w.attachEvent("onload", loader);}else{w.onload = loader;}})(window, document);</script>
                 </span>
             ©Copiryght 2021</p>
-            <?php
-                if(!isset($_SESSION['user'])) {
-                    echo "<a role='button' class='btn btn-outline-secondary text-muted' href='login.php'><i class='fas fa-key'></i></a>";
-                }
-            ?>
         </div>
     </div>
 </footer>

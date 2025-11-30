@@ -23,16 +23,8 @@
                     <a class="nav-link <?php if(basename($_SERVER['PHP_SELF']) == "recensioni.php"){echo "active";} else {echo "";} ?>" href="recensioni.php">Recensioni</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link <?php if(basename($_SERVER['PHP_SELF']) == "news.php" || basename($_SERVER['PHP_SELF']) == "newsDetail.php"){echo "active";} else {echo "";} ?>" href="news.php">News</a>
-                </li>
-                <li class="nav-item">
                     <a class="nav-link <?php if(basename($_SERVER['PHP_SELF']) == "contatti.php"){echo "active";} else {echo "";} ?>" href="contatti.php">Contatti</a>
                 </li>
-                <?php
-                    if(isset($_SESSION['user'])) {
-                        echo "<li class='nav-item'><a href='admin/admin.php' class='nav-link'>Area Admin</a></li>";
-                    }
-                ?>
             </ul>
         </div>
     </div>

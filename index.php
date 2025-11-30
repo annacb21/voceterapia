@@ -1,12 +1,25 @@
 <?php 
 require_once("resources/config.php"); 
-$query = query("SELECT * FROM recensioni WHERE autore = 'Andrea Rizzi' OR autore = 'Marianna Castiglioni' OR autore = 'Ivan' ORDER BY data_rec DESC");
-confirm($query);
+require_once("resources/allReviews.php");
 $recensioni = array();
+// keep only specific authors
+$wanted = array('Andrea Rizzi', 'Marianna Castiglioni', 'Ivan');
+$filtered = array_filter($allReviews, function($r) use ($wanted) {
+    return in_array($r['autore'], $wanted);
+});
+// sort by date desc (dates are in d/m/Y in the array)
+usort($filtered, function($a, $b) {
+    $da = DateTime::createFromFormat('d/m/Y', $a['dataCreazione']);
+    $db = DateTime::createFromFormat('d/m/Y', $b['dataCreazione']);
+    if (!$da) $da = new DateTime('@0');
+    if (!$db) $db = new DateTime('@0');
+    return $db <=> $da;
+});
 $i = 0;
-while($row = fetch_array($query)) {
-    $d = date_create($row['data_rec']);
-    $pdate = date_format($d, 'd/m/y');
+foreach($filtered as $row) {
+    $d = DateTime::createFromFormat('d/m/Y', $row['dataCreazione']);
+    if (!$d) { $d = new DateTime($row['dataCreazione']); }
+    $pdate = $d->format('d/m/y');
     $recensioni[$i] = new Recensione($row['id'], $row['autore'], $row['titolo'], $row['testo'], $row['punteggio'], $pdate);
     $i++;
 }

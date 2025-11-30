@@ -1,12 +1,20 @@
 <?php 
 require_once("resources/config.php"); 
-$query = query("SELECT * FROM recensioni ORDER BY data_rec DESC");
-confirm($query);
+require_once("resources/allReviews.php");
 $recensioni = array();
+// sort by date desc (dates are in d/m/Y in the array)
+usort($allReviews, function($a, $b) {
+    $da = DateTime::createFromFormat('d/m/Y', $a['dataCreazione']);
+    $db = DateTime::createFromFormat('d/m/Y', $b['dataCreazione']);
+    if (!$da) $da = new DateTime('@0');
+    if (!$db) $db = new DateTime('@0');
+    return $db <=> $da;
+});
 $i = 0;
-while($row = fetch_array($query)) {
-    $d = date_create($row['data_rec']);
-    $pdate = date_format($d, 'd/m/y');
+foreach($allReviews as $row) {
+    $d = DateTime::createFromFormat('d/m/Y', $row['dataCreazione']);
+    if (!$d) { $d = new DateTime($row['dataCreazione']); }
+    $pdate = $d->format('d/m/y');
     $recensioni[$i] = new Recensione($row['id'], $row['autore'], $row['titolo'], $row['testo'], $row['punteggio'], $pdate);
     $i++;
 }
@@ -35,63 +43,6 @@ while($row = fetch_array($query)) {
 
     <!-- MAIN CONTENT -->
     <div class="background-light pt-4">
-        <div class="w-75 m-auto py-4 bottom-border" id="ReviewForm">
-            <h1 class="text-center">Scrivi una recensione</h1>
-            <p class="text-center text-muted">I campi contrassegnati con * sono obbligatori</p>
-            <?php display_message(); ?>
-            <form action="" method="POST" class="row g-4 needs-validation py-4" novalidate>
-                <?php addReview(); ?>
-                <div class="col-lg-6">
-                    <label for="nome" class="form-label">Nome</label>
-                    <input type="text" class="form-control" id="nome" name="nome" placeholder="Mario Rossi, Mario ..." aria-describedby="nameHelp" maxlength="50">
-                    <div id="nameHelp" class="form-text">Non inserire nulla se si vuole pubblicare la recensione come utente anonimo</div>
-                </div>
-                <div class="col-lg-6">
-                    <label for="titolo" class="form-label">* Titolo</label>
-                    <input type="text" class="form-control" id="titolo" name="titolo" placeholder="Ottima insegnante di canto ..." maxlength="100" required>
-                    <div class="invalid-feedback">Inserire un titolo per la recensione</div>
-                </div>
-                <div class="col-lg-6">
-                    <div class="row full-height">
-                        <div>
-                            <label for="code" class="form-label">* Codice</label>
-                            <input type="text" class="form-control" id="code" name="code" aria-describedby="codeHelp" maxlength="15" required>
-                            <div id="codeHelp" class="form-text">Codice di 15 cifre che viene rilasciato dall’insegnante per garantire l’autenticità della recensione</div>
-                            <div class="invalid-feedback">Inserire un codice valido</div>
-                        </div>
-                        <div class="rating pt-3 align-self-end">
-                            <p>* Assegna un punteggio da 1 a 5 stelle</p>
-                            <div class="star-rating">
-                                <input type="radio" name="rate" id="rate-5" value="5" onClick="document.getElementById('score').value = this.value;">
-                                <label for="rate-5" class="fas fa-star"></label>
-                                <input type="radio" name="rate" id="rate-4" value="4" onClick="document.getElementById('score').value = this.value;">
-                                <label for="rate-4" class="fas fa-star"></label>
-                                <input type="radio" name="rate" id="rate-3" value="3" onClick="document.getElementById('score').value = this.value;">
-                                <label for="rate-3" class="fas fa-star"></label>
-                                <input type="radio" name="rate" id="rate-2" value="2" onClick="document.getElementById('score').value = this.value;">
-                                <label for="rate-2" class="fas fa-star"></label>
-                                <input type="radio" name="rate" id="rate-1" value="1" onClick="document.getElementById('score').value = this.value;">
-                                <label for="rate-1" class="fas fa-star"></label>
-                            </div>
-                            <input type="text" class="form-control" name="score" id="score" value="" required>
-                            <div class="invalid-feedback">Scegliere un punteggio da 1 a 5 stelle</div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-6">
-                    <label for="recensione" class="form-label">* Recensione</label>
-                    <textarea class="form-control" id="recensione" name="recensione" rows="7" placeholder="Scrivi la tua recensione ..." aria-describedby="recHelp" maxlength="500" required></textarea>
-                    <div id="recHelp" class="form-text">Lunghezza max. di 500 caratteri</div>
-                    <div class="invalid-feedback">Inserire una recensione</div>
-                </div>
-                <div class="col-lg-12 form-check pt-3 pb-5">
-                    <input class="form-check-input" type="checkbox" value="" id="checkPrivacy" name="checkPrivacy" required>
-                    <label class="form-check-label" for="checkPrivacy">Dichiaro di aver letto la <a href="https://www.iubenda.com/privacy-policy/73127717" class="iubenda-black iubenda-noiframe iubenda-embed iubenda-noiframe " title="Privacy Policy ">Privacy Policy</a><script type="text/javascript">(function (w,d) {var loader = function () {var s = d.createElement("script"), tag = d.getElementsByTagName("script")[0]; s.src="https://cdn.iubenda.com/iubenda.js"; tag.parentNode.insertBefore(s,tag);}; if(w.addEventListener){w.addEventListener("load", loader, false);}else if(w.attachEvent){w.attachEvent("onload", loader);}else{w.onload = loader;}})(window, document);</script> e di acconsentire, ai soli fini del servizio richiesto, al trattamento dei miei dati personali.</label>
-                    <div class="invalid-feedback">Devi accettare le condizioni di privacy per poter pubblicare la recensione</div>
-                </div>
-                <button type="submit" name="addReview" class="btn form-btn m-auto">Pubblica</button>
-            </form>
-        </div>
         <div id="AllReviews" class="content-padding">
             <h2 class="py-4 text-center">Tutte le recensioni</h2>
             <div class="glide pb-3">

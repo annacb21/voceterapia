@@ -52,50 +52,10 @@
                     </div>
                     <div class="col-lg-9 col-md-10">
                         <h2 class="pb-3 h3">Email</h2>
-                        <p>elisa.fortunati@virgilio.it</p>
+                        <p>elisa.fortunati@gmail.it</p>
                     </div>
                 </div>
             </div>
-        </div>
-
-        <div id="contact-form" class="py-5 w-75 m-auto">
-            <h2 class="text-center">Invia una email</h2>
-            <p class="text-center text-muted pt-2 pb-4">I campi contrassegnati con un * sono obbligatori</p>
-            <?php display_message(); ?>
-            <form action="" method="POST" class="row g-3 needs-validation" novalidate>
-                <?php send_email(); ?>
-                <div class="col-lg-6">
-                    <label for="nome" class="form-label">* Nome</label>
-                    <input type="text" class="form-control" id="nome" name="nome" placeholder="Nome" required>
-                    <div class="invalid-feedback">Inserire il proprio nome</div>
-                </div>
-                <div class="col-lg-6">
-                    <label for="cognome" class="form-label">* Cognome</label>
-                    <input type="text" class="form-control" id="cognome" name="cognome" placeholder="Cognome" required>
-                    <div class="invalid-feedback">Inserire il proprio cognome</div>
-                </div>
-                <div class="col-lg-6">
-                    <label for="email" class="form-label">* Email</label>
-                    <input type="email" class="form-control" id="email" name="email" placeholder="Email" required>
-                    <div class="invalid-feedback">Inserire una email valida</div>
-                </div>
-                <div class="col-lg-6">
-                    <label for="telefono" class="form-label">* Telefono</label>
-                    <input type="text" class="form-control" id="telefono" name="telefono" placeholder="Telefono" required>
-                    <div class="invalid-feedback">Inserire un numero di telefono</div>
-                </div>
-                <div class="col-lg-12">
-                    <label for="messaggio" class="form-label">* Messaggio</label>
-                    <textarea class="form-control" id="messaggio" name="messaggio" rows="5" placeholder="Scrivi qui il tuo messaggio" required></textarea>
-                    <div class="invalid-feedback">Inserire un messaggio</div>
-                </div>
-                <div class="col-lg-12 form-check pb-5">
-                    <input class="form-check-input" type="checkbox" value="" id="checkPrivacy" name="checkPrivacy" required>
-                    <label class="form-check-label" for="checkPrivacy">Dichiaro di aver letto la <a href="https://www.iubenda.com/privacy-policy/73127717" class="iubenda-white iubenda-noiframe iubenda-embed iubenda-noiframe " title="Privacy Policy ">Privacy Policy</a><script type="text/javascript">(function (w,d) {var loader = function () {var s = d.createElement("script"), tag = d.getElementsByTagName("script")[0]; s.src="https://cdn.iubenda.com/iubenda.js"; tag.parentNode.insertBefore(s,tag);}; if(w.addEventListener){w.addEventListener("load", loader, false);}else if(w.attachEvent){w.attachEvent("onload", loader);}else{w.onload = loader;}})(window, document);</script> e di acconsentire, ai soli fini del servizio richiesto, al trattamento dei miei dati personali.</label>
-                    <div class="invalid-feedback">Devi accettare le condizioni di privacy per poter procedere</div>
-                </div>
-                <button type="submit" name="sendEmail" class="btn form-btn m-auto">Invia</button>
-            </form>
         </div>
     </div>
 
