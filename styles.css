@@ -405,6 +405,12 @@ footer a {
     color: var(--main-color);
 }
 
+.contatti {
+    min-height: 478px;
+    display: flex;
+    flex-direction: column;
+}
+
 /* MEDIA QUERY*/
 
 /* LG - small laptop */
